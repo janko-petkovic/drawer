@@ -1,0 +1,243 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage[parfill]{parskip}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\dex}[1]{\frac{\partial#1}{\partial x}}
+\newcommand{\dt}[1]{\frac{\partial#1}{\partial t}}
+\newcommand{\ddex}[1]{\frac{\partial^2#1}{\partial x^2}}
+
+
+\begin{document}
+
+	\section{Problem statement}
+	Here we try to derive and solve the master equation for the very simple
+	reaction
+	\begin{equation}\label{eq:reaction}
+		A \longleftrightarrow B
+	\end{equation}
+	described by the equation
+	\begin{equation}
+		\left\{\begin{aligned}
+			&\dot{X} = \alpha \, b - \beta a\\
+			&a(t) + b(t) = N\\
+			&a(0) = a_0
+		\end{aligned}\right.
+	\end{equation}
+
+	with $a,b, a_0 \in \mathbb{N}$ and $a,b, a_0 < N$. This is equivalent to 
+	\begin{equation}
+		\left\{\begin{aligned}
+			&\dot{a} = \alpha \, (N-a) - \beta \,a\\
+			&a(0) = a_0
+		\end{aligned}\right.
+	\end{equation}
+
+	with $a, a_0 \in \mathbb{N}, a, a_0 < N$, and we will concentrate on this latter formulation from
+	here onward.
+
+	\section{Chemical master equation}
+	Following the usual methodology, we look for the chemical master reaction in
+	the form
+	\begin{equation*}
+		\frac{dp}{dt}(t,a) = \sum_{a'} \Big[W_{aa'} \, p(t, a') - W_{a'a} \, p(t,
+		a)\Big]
+	\end{equation*}
+	where $p(t,a)$ is the probability density function of $a$ at time $t$, and
+	$W_{kl}$ is the transition rate from the state $a = l$ to the state $a=k$.
+	Using the correct modeling approach \red{(to be written clearly)} one obtains that
+	the probability of one transition happening during an interval $dt$ follows
+	$$
+		\mathbb{P}(\text{A becoming B}) = W_{ba} \, dt + o(dt)
+	$$
+	This allows to neglect the possibility of multiple transitions occurring in a
+	single time step as their probability is of the order of $o(dt^2)$.
+	Building upon this, we can write the master equation for the reaction
+	\eqref{eq:reaction} as 
+	\begin{equation}\label{eq:mastereq}
+		\begin{aligned}
+		\frac{dp}{dt}(t,a) \quad = \quad & + p(t, a-1) \, \alpha \, (N - a + 1)\\
+		& + p(t, a+1) \, \beta \, (a+1)\\[6pt]
+		& - p(t,a) \, \alpha \, (N-a) \\[6pt]
+		& - p(t,a) \, \beta \, a
+		\end{aligned}
+	\end{equation}
+	the first two terms describing the influx of probability from the states
+	$a+1$ and $a-1$, and the last two describing the corresponding outflux.
+
+	\section{Fokker-Planck equation}
+	We now want to try and solve the equation for $p(t,a)$ via the Fokker-Planck
+	method. In order to do that, we have to expand $p$ in its second argument up
+	to the second order. Since $N \gg 1$ (we are talking at least hundreds of
+	units), we switch our focus from $p(t,a)$ to the probability $p(t,x)$ of the
+	fraction $x = \frac{a}{N}, x \in [0,1] \subset \mathbb{R}$\footnote{this is
+	actually $\mathbb{Q}$, I don't know if it can be useful for something later
+	maybe}\red{(also Ziv does this so it should be all pretty classic - find
+	better ref tho)}. The new probability densities of interest become then: 
+	\begin{align*}
+		& p(t,a) \rightarrow p(t,x)\\
+		& p(t,a+1) \rightarrow p(t, x + \frac{1}{N})\\
+		& p(t,a-1) \rightarrow p(t, x - \frac{1}{N})
+	\end{align*}
+	This densities can be expanded in the second argument as:
+	\begin{align*}
+		& p(t,x + \frac{1}{N}) = p(t,x) + \frac{1}{N}\dex{p}(t,x) +
+		\frac{1}{2N^2}\ddex{p}(t,x) + o\left(\frac{1}{N^2}\right)\\[6pt]
+		& p(t,x - \frac{1}{N}) = p(t,x) - \frac{1}{N}\dex{p}(t,x) +
+		\frac{1}{2N^2}\ddex{p}(t,x) + o\left(\frac{1}{N^2}\right)
+	\end{align*}
+	(notice the minus sign). Inserting this into \eqref{eq:mastereq} and ignoring the higher order terms,
+	we can write
+	\begin{equation*}
+		\begin{aligned}
+			\dt{p}(t,x) = &+ \left[ p(t,x) + \frac{1}{N}\dex{p}(t,x) +
+			\frac{1}{2N^2}\ddex{p}(t,x) \right] \, \alpha \, (1-x+\frac{1}{N})\\
+			&+ \left[ p(t,x) - \frac{1}{N}\dex{p}(t,x) +
+			\frac{1}{2N^2}\ddex{p}(t,x) \right] \, \beta \, (x+\frac{1}{N})\\
+			&- p(t,x) \Big[ \alpha ( 1 - x )  + \beta x \Big]
+		\end{aligned}
+	\end{equation*}
+	and after eliminating the opposite terms, we obtain the final Fokker-Planck
+	equation
+	\begin{equation}\label{eq:fokker}
+		\begin{aligned}
+			\dt{p}(t,x) \quad = \quad & \frac{\alpha \left(1-x+\frac{1}{N}\right) +
+			\beta\left(x+\frac{1}{N}\right)}{2N^2} \; \ddex{p}(t,x) \quad + \\[6pt]
+			& \frac{\alpha \left(1-x+\frac{1}{N}\right) -
+			\beta\left(x+\frac{1}{N}\right)}{N} \; \dex{p}(t,x) \quad + \\[6pt]
+			&\frac{\alpha + \beta}{N} \; p(t,x)
+		\end{aligned}
+	\end{equation}
+	
+	\section{Solving the equation}
+	Let us briefly recap the properties of the problem explored so far:
+	\begin{itemize}
+		\item $t \in \mathbb{R}$ is the time variable of the reaction; \item $x
+		\in I = [0,1] \subset \mathbb{R}$ is the fraction of N molecules located
+		in A; 
+		\item $p$ is a probability density function $p : \mathbb{R}\times
+		I \rightarrow [0,1]$ describing the likelihood\footnote{likelihood is
+		not really correct but you get my point} of finding a fraction
+		$x+dx$ of molecules in A at time $t$.
+	\end{itemize}
+	For ease of notation, lets define the functions
+	\begin{align*}
+		&P(x) = \frac{\alpha \left(1-x+\frac{1}{N}\right) +
+			\beta\left(x+\frac{1}{N}\right)}{2N^2}\\[6pt]
+		&Q(x) = \frac{\alpha \left(1-x+\frac{1}{N}\right) -
+			\beta\left(x+\frac{1}{N}\right)}{N} \\[6pt]
+		&R = \frac{\alpha + \beta}{N}
+	\end{align*}
+	We can then proceed to solve the FK-equation via separation of variables
+	\red{(one should be able to do this as $I$ is limited and also wikipedia
+	uses this scenario as an example and proceeds like this. I still don't know,
+	though,	what is the creterion for picking SOV over other solution
+	techniques)}. By imposing $p(t,x) = T(t) \, X(x)$, we can rewrite
+	\eqref{eq:fokker} as
+	\begin{equation}
+		\frac{\dot{T}}{T} = P(x) \frac{X''}{X} + Q(x)\frac{X'}{X} + R = -\lambda
+	\end{equation}
+	with $\lambda \in \mathbb{R}^+$, and proceed to solve independently for $t$ and $x$.
+	
+	\subsection{Spatial part: Sturm-Liouville problem}
+	The spatial part of the problem represents a \textit{classic}
+	(Sturm-Liouville problem).
+	We start by investigating when $P(x)$ is equal to $0$:
+	\begin{equation*}
+		P(\bar{x}) = \alpha\left(1-\bar{x}+\frac{1}{N}\right) + \beta
+		\left(\bar{x} + \frac{1}{N}\right)
+		= 0
+	\end{equation*}
+	By factoring out $x$ and equating, one obtains the solution as
+	\begin{equation*}
+		\bar{x} = \frac{(N+1) \alpha + \beta}{N (\alpha - \beta)}
+	\end{equation*}
+	This value of $x$ lies outside of $I$, as indeed one can verify that
+	$\bar{x} > 1$ if and only if $\alpha > - (N+1) \beta$, which is trivially
+	true as $\alpha, \beta, N > 0$ by definition.
+	The original problem
+	\begin{equation}\label{eq:clearform}
+		P(x) X '' + Q(x) X' + R X = -\lambda X
+	\end{equation}
+	can, therefore, be put in the canonical form
+	\begin{equation}\label{eq:slform}
+		\frac{d}{dx}\left[p(x) \frac{dX}{dx} \right] + q(x) X = -\lambda \, w(x) X
+	\end{equation}
+	setting
+	\begin{align*}
+		p(x) = e^{\int \frac{Q}{P}}, \qquad
+		q(x) = \frac{R}{P}e^{\int \frac{Q}{P}}, \qquad
+		w(x) = \frac{1}{P}e^{\int \frac{Q}{P}}
+	\end{align*}
+	From these definitions, it can be easily seen that the coefficients indeed
+	respect the necessary positivity and differentiability\footnote{actually
+	this I have to check for the second derivative of P} conditions required in a
+	SL-problem.
+	\red{SL-theory provides an extensive corpus of methods to characterize and
+	solve equations in the form \eqref{eq:slform}. I have not read this
+	corpus so for now I will try with the easiest way, series expansion.}
+
+	\paragraph{Cheating?} Before diving into the series expansion, observe that
+	\eqref{eq:clearform} is naturally expressed in powers of $1/N$, the second
+	derivative term representing a superior power. We could \red{(could we?)} start
+	by considering only the terms of order $1/N$. The equation then becomes:
+	\begin{equation}
+		X'(x) + r(x) X = 0
+	\end{equation}
+	with
+	\begin{equation*}
+		r(x) = \frac{\alpha + \beta + \lambda N}{\frac{\alpha(N+1)-\beta}{N} -
+		x(\alpha + \beta)}
+	\end{equation*}
+	Unfortunately, $r(x)$ is singular for
+	\begin{equation*}
+		\bar{x} = \frac{\alpha(N+1) + \beta}{N(\alpha + \beta)}
+	\end{equation*}
+	which happens lie in the $I$ (can be easily checked in the limit $N \to
+	\infty$). 
+	\red{What do we do? Do we solve separately
+		\begin{align*}
+			&X' + r(x) X = 0 &&\text{Far from $\bar{x}$}\\
+			&P(x) X'' + (R+\lambda) X = 0 && \text{Close to $\bar{x}$}
+		\end{align*}
+	and glue them together in the vicinity of $\bar{x}$? I remember one can do
+	something similar for the Hermite equation but I don't remember exactly how.
+	And also the Hermite equation is not singular.....
+	}
+
+	\paragraph{Series solution} Due to the non-negativity of $Q(x)$ on $I$, the
+	Fuchs theorem grants that the solution $X(x)$ has a power series expansion
+	centered at any $x_0 \in I$ converging over the whole extent of $I$.
+	We can therefore proceed by inserting the expansions
+	\begin{equation*}
+		X(x) = \sum_{n=0}^{\infty} c_n x^n, \quad	
+		X'(x) = \sum_{n=1}^{\infty} n \, c_n x^{n-1}, \quad	
+		X''(x) = \sum_{n=2}^{\infty} n \, (n-1) \, c_n x^{n-2}
+	\end{equation*}
+	into the original equation \eqref{eq:clearform}, obtaining
+	\begin{align*}
+		&\left[x\left(\frac{\beta - \alpha}{2N}\right) + \frac{\alpha(N+1) +
+		\beta}{2N^2}\right]\sum_{n=2}^{\infty} n \, (n-1) \, c_n x^{n-2} \quad +
+		\\
+		&\left[- x\left( \beta + \alpha \right) + \frac{\alpha(N+1) -
+		\beta}{N}\right]\sum_{n=2}^{\infty} n \, c_n x^{n-1} \quad + 
+		\\
+		&(\alpha + \beta + N\lambda) \sum_{n=0}^{\infty} c_n x^n = 0
+	\end{align*}
+	By rearranging the summation indexes and factoring the powers, one can
+	obtain\footnote{one can but its painful}
+	\begin{align*}
+		&\frac{\alpha(N+1) + \beta}{N^2} \, c_2 + \frac{\alpha(N+1) -\beta}{N} \,
+		c_1 + (\alpha + \beta + N\lambda) \, c_0 \quad + 
+		\\ 
+		&\sum_{n=1}^{\infty} 
+		\Big\{\frac{\alpha(N+1) + \beta}{2N^2}(n+2)(n+1) \, c_{n+2} \quad + \\
+		&\qquad \frac{n+1}{N} \left[(\beta-\alpha)\left(\frac{n}{2}-1\right) +
+		\alpha N \right] \, c_{n+1} \quad + \\
+		&\qquad \left[(\beta + \alpha)(1-n) + N\lambda \right] \, c_n \Big\} = 0
+	\end{align*}
+	\red{Appearently, each subsequent coefficient has an additional $N$ term,
+		quickly exploding - can this even be well approximated by some first $n$
+	series terms?}
+\end{document}	
