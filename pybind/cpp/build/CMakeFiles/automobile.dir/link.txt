@@ -1,0 +1,1 @@
+/sbin/c++ -fPIC -shared -Wl,-soname,libautomobile.so -o libautomobile.so CMakeFiles/automobile.dir/src/motorcycle.cpp.o 
