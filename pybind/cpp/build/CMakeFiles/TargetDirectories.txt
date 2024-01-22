@@ -1,7 +1,0 @@
-/home/janko/code/trashcan/pybind/cpp/build/CMakeFiles/automobile.dir
-/home/janko/code/trashcan/pybind/cpp/build/CMakeFiles/edit_cache.dir
-/home/janko/code/trashcan/pybind/cpp/build/CMakeFiles/rebuild_cache.dir
-/home/janko/code/trashcan/pybind/cpp/build/CMakeFiles/list_install_components.dir
-/home/janko/code/trashcan/pybind/cpp/build/CMakeFiles/install.dir
-/home/janko/code/trashcan/pybind/cpp/build/CMakeFiles/install/local.dir
-/home/janko/code/trashcan/pybind/cpp/build/CMakeFiles/install/strip.dir
