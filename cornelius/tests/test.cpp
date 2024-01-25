@@ -1,6 +1,1 @@
-// #include <pybind11/pybind11.h>
-#include <pybind11/pybind11.h>
-
-int main () {
-	return 0;
-}
+int test() {return 0;}

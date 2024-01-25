@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-plt.style.use('rdn.plotstyles.rdnstyle')
+# plt.style.use('rdn.plotstyles.rdnstyle')
 import numpy as np
 
 data = np.genfromtxt('output/data.csv', delimiter=',').T

@@ -1,5 +1,6 @@
 #include <fstream>
 #include <algorithm>
+#include <iostream>
 
 #include "simulation.h"
 
@@ -79,6 +80,7 @@ void Simulation::run_simulation(const int epochs) {
 
 void Simulation::write_data(const char* path_to_save_data) {
 	std::ofstream ofs{path_to_save_data, std::ofstream::out | std::ofstream::trunc};
+	std::cout << "Saving data in: " << path_to_save_data << std::endl;
 	for (auto& p : _bag) {
 		ofs << p.x << ',' << p.glowing << '\n';
 	};
