@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,libjlib.so -o libjlib.so CMakeFiles/jlib.dir/jlib.cpp.o 

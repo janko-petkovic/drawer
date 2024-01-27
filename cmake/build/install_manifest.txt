@@ -1,0 +1,1 @@
+/home/janko/code/trashcan/cmake/bin/test

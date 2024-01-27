@@ -1,0 +1,3 @@
+/home/janko/code/trashcan/pybind/src/build/CMakeFiles/jlib.dir
+/home/janko/code/trashcan/pybind/src/build/CMakeFiles/edit_cache.dir
+/home/janko/code/trashcan/pybind/src/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+/home/janko/code/trashcan/cmake/src/build/CMakeFiles/jlib.dir
+/home/janko/code/trashcan/cmake/src/build/CMakeFiles/main.dir
+/home/janko/code/trashcan/cmake/src/build/CMakeFiles/edit_cache.dir
+/home/janko/code/trashcan/cmake/src/build/CMakeFiles/rebuild_cache.dir
