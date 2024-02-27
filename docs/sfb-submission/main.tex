@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{tikz}
+
+\begin{document}
+	\begin{figure}
+		\centering
+		\begin{tikzpicture}
+			\node [anchor=north west] at (0,0)
+				{\includegraphics[height=3cm]{../yombe.png}}; 
+			\node [anchor=north west, draw, ultra thin, rounded corners] at	(6,0) 
+				{\includegraphics[height=3cm]{../graphs.png}};
+
+			\draw [rounded corners, ultra thin] (4.7,-0.05) rectangle (5.33,-0.67);
+			\draw [ultra thin] (5.33, -0.3) -- (6, -0.5);
+
+
+			
+		\end{tikzpicture}	
+	\end{figure}
+	
+\end{document}
