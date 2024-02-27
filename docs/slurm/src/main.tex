@@ -17,6 +17,9 @@
 	% numberstyle=\scriptsize
 }
 
+\usepackage{tikz}
+\usepackage{luaplot}
+
 \newcommand{\VE}[1]{\begin{verbatim}#1\end{verbatim}}
 
 \title{\textbf{Some notes on slurm}}
@@ -187,4 +190,7 @@ nothing}, frame=single]
 $ sbatch -c 2 --mem-per-cpu 2G -t 5:0:0 \\
 	 -J crunchy 
 \end{lstlisting}
+
+
+
 \end{document}
