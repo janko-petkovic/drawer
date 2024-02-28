@@ -1,0 +1,112 @@
+\documentclass[a4paper, 10pt]{article}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Margins
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+
+% Mathematics
+\usepackage{amsmath, amssymb, mathtools, amsthm}
+
+% Bibliography (uncomment if needed)
+\usepackage{csquotes}
+\usepackage[backend=biber, sorting=none, style=nature]{biblatex}
+\addbibresource{biblio.bib}
+
+% Personal taste
+\usepackage[font=footnotesize]{caption}
+\usepackage[parfill]{parskip}
+
+
+\title{Some derivation of the axon problem}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  This is about Nestor's diffusion advection problem. We have a finite axon of
+  length $L$, with some influx $j_0$ at the soma ($x=0$). We also know that the
+  dendrite is closed, so no net flux will be possible at $x=L$.\\
+  Our chemical species $u : (x,t) \mapsto u(x,t)$ undergoes diffusion,
+  advection, and decay. If I am not mistaken, the problem can be formulated as
+  the initial boundary problem:
+
+  \begin{equation}\label{eq:problem}
+    \left\{ \begin{aligned}
+      &u_t = D \, u_{xx} - v \, u_x - k \, u\\
+      &\left[D \, u_x - v \, u\right]_{(0,t)} = j_0\\
+      &\left[D \, u_x - v \, u\right]_{(L,t)} = 0\\
+      &u(x,0) = \varphi(x)
+    \end{aligned}\right.
+  \end{equation}
+  
+  on the domain $x \in D = [0, L]$ and $t \in [0, +\infty]$.
+  This is very classic stuff and I sure hope there exists a solution of
+  some sort. We start with a very traditional substitution of the dependent
+  variable
+
+  \begin{equation}\label{eq:change}
+    u(x,t) = w(x,t) \, e^{\eta t - \mu x}  
+  \end{equation}
+
+  where
+
+  \begin{equation}
+    \eta = k + \frac{v^2}{4D}, \qquad \mu = \frac{v}{2D}
+  \end{equation}
+  
+  by direct substitution we get 
+
+  \begin{equation}\label{eq:diffusion:w}
+    \left\{ \begin{aligned}
+      &w_t = D \, w_{xx}\\
+      &\left[D \, w_x - (\mu - v) w\right]_{(0,t)} = j_0 \, e^{\mu x - \eta
+      t}\\
+      &\left[D \, w_x - (\mu - v) w\right]_{(0,t)} = 0\\
+      &w(x,0) = \varphi(x) \, e^{\mu x - \eta t} 
+    \end{aligned}\right.
+  \end{equation}
+  
+  Now, I think we cannot really find the steady state solution of $u(x,t)$ with
+  this method because \eqref{eq:change} explodes for $t \to \infty$. Let us,
+  therefore, try and find the full solution of \eqref{eq:diffusion:w}. We
+  proceed as illustrated in \cite{Salsa2022PartialDE} separating our solution as
+  $w(x,t) = X(x)T(t)$ and obtaining
+
+  \begin{equation}
+    \frac{1}{D}\frac{T'(t)}{T(t)} = \frac{X''(x)}{X(x)} = \lambda
+  \end{equation}
+
+  The temporal and the spatial portions of the model can therefore computed
+  indepentendently. We start with the temporal portion, obtaining
+
+  \begin{equation}
+    T'(t) - \lambda \, D \, T = 0 \quad \rightarrow \quad T(t) = C e^{\lambda D
+    t}
+  \end{equation}
+
+  The spatial portion is the solution of the more delicate problem
+  
+  \begin{equation}
+    \left\{ \begin{aligned}
+      &X''(x) -\lambda X = 0\\
+      &D X'(0) - (\mu - v) X(0) = j_0 e^{- (\eta + \lambda D) t}\\
+      &D X'(L) - (\mu - v) X(L) = 0
+    \end{aligned}\right.
+  \end{equation}
+
+  Obwerve that in order to obtain a constant expression on the RHS of the first
+  boundary conditions, we have to impose $\lambda = -\frac{\eta}{D}$. 
+  
+  \printbibliography
+
+\end{document}
+
+
+
+
+

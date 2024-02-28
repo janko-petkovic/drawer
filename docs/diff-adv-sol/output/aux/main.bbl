@@ -1,0 +1,53 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Salsa2022PartialDE}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b35b1e7b6a3d1d5c2d1bfebf13b552d9}{%
+           family={Salsa},
+           familyi={S\bibinitperiod},
+           given={Sandro},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b35b1e7b6a3d1d5c2d1bfebf13b552d9}
+      \strng{fullhash}{b35b1e7b6a3d1d5c2d1bfebf13b552d9}
+      \strng{bibnamehash}{b35b1e7b6a3d1d5c2d1bfebf13b552d9}
+      \strng{authorbibnamehash}{b35b1e7b6a3d1d5c2d1bfebf13b552d9}
+      \strng{authornamehash}{b35b1e7b6a3d1d5c2d1bfebf13b552d9}
+      \strng{authorfullhash}{b35b1e7b6a3d1d5c2d1bfebf13b552d9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{UNITEXT}
+      \field{title}{Partial Differential Equations in Action}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:124525275
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:124525275
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
