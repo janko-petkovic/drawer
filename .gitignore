@@ -1,1 +1,4 @@
 *.tsv
+
+# Ignore the aux files of tex
+*/output/aux/*
