@@ -46,8 +46,70 @@
   
   on the domain $x \in D = [0, L]$ and $t \in [0, +\infty]$.
   This is very classic stuff and I sure hope there exists a solution of
-  some sort. We start with a very traditional substitution of the dependent
-  variable
+  some sort. Let us start first with the steady-state solution
+
+  \paragraph{Steady-state} In order to find the steady-state solution
+  $s(x) = u(x, t\to \infty)$, we impose $u_t = 0$. That leaves us with the
+  Sturm-Liouville problem
+
+  \begin{equation}
+    \left\{\begin{aligned}
+      &D s'' - v s' - k s = 0\\
+      & D s'(0) - v s(0) = j0 \\
+      & D s'(L) - v s(L) = 0 \\
+    \end{aligned}\right.
+  \end{equation}
+
+  which admits the general solution
+  
+  \begin{equation}
+    s(x) = a \, e^{\lambda_1 x} + b \, e^{\lambda_2 x}, \quad a, b \in \mathbb{R}
+  \end{equation}
+
+  Since $D, v, k > 0$ (things diffuse, move rightwards and degrade in time),
+  also the eigenvalues $\lambda_1$ and $\lambda_2$ will be real.
+  We can now proceed and find the exact values of $a$ and $b$ by direct
+  substitution in the boundary conditions. Before going ahead, we rewrite the
+  expressions for $s(x)$ and $s'(x)$ in the more convenient form
+
+  \begin{align}
+    &s(x) = e^{\frac{v}{2D}x}\left[a \, e^{\frac{\Delta}{2D}x} + b \,
+      e^{-\frac{\Delta}{2D}x}\right]\\[6pt]
+    &s'(x) = \frac{v}{2D}s(x) + \frac{\Delta}{2D} e^{\frac{v}{2D}x}\left[a \,
+      e^{\frac{\Delta}{2D}x} - b \, e^{-\frac{\Delta}{2D}x}\right]
+  \end{align}
+
+  where $\Delta = \sqrt{v^2 + 4 D k}$. By inserting these expressions in the
+  boundary conditions, we obtain
+
+  \begin{equation*}
+    \left\{\begin{aligned}
+    &b = \frac{\Delta - v}{\Delta + v} \, a - \frac{2j_0}{\Delta - v}\\[6pt]
+    &b = \exp\left\{\frac{\Delta}{D}L\right\} \, \frac{\Delta - v}{\Delta + v}
+    \,a
+    \end{aligned}\right.
+  \end{equation*}
+
+  This yields the constant values
+
+  \begin{equation}
+    a = \frac{2j_0}{(\Delta - v)(1-e^{\frac{\Delta}{D}L})},
+    \qquad
+    b = \frac{2j_0 \, e^{\frac{\Delta}{D}L}}
+    {(\Delta + v)(1-e^{\frac{\Delta}{D}L})}
+  \end{equation}
+  
+  and the final expression for $s(x)$ as
+  \begin{equation}
+    s(x) = \frac{2j_0}{1-e^{\frac{\Delta}{D}L}} \, e^{\frac{v}{2D}x}
+    \left[\frac{e^{\frac{\Delta}{2D}x}}{\Delta - v} +
+    \frac{e^{-\frac{\Delta}{2D}(x-2L)}}{\Delta + v}\right]
+  \end{equation}
+
+  Interestingly, the flux $j_0$ acts as a scaling parameter.
+
+  \paragraph{Full solution} I don't really know how to do this for now but soon.
+  Below are some failed attempts. We start with the substitution
 
   \begin{equation}\label{eq:change}
     u(x,t) = w(x,t) \, e^{\eta t - \mu x}  
