@@ -39,7 +39,9 @@ The eligible projects could tackle any of the following themes:
    would be interesting to understand which metrics are equivalent.
    An additional rule can be taken from Kuzmina et al. 2024.
 
-## SSM: summary statistics and dimensionality reduction
+## SSM (spectral submanifolds)
+
+Summary statistics and dimensionality reduction
 
 1. SSM: it looks great and I think one really needs to study it (George Haller
    lab ETH, in particular Marraffa A. and Prof. Mante V.  for neuroscientific
@@ -49,3 +51,7 @@ The eligible projects could tackle any of the following themes:
 
 3. SSM can be used to analyze the learning trajectories of DL models during
    training.
+
+# Medical
+
+1. From pyloric circuit of C. borealis to heart energy optimization? Does it make sense? We have kind of understood everything about the heart by now so maybe the only perspective is finding some alterations in the reduced dynamics to use instead of ECG - latent Brugata syndrome? In Melo et al. 2023 PNAS Nexus, they use an FC, with 0.91 AUC. What about RNNs or tCNNs
