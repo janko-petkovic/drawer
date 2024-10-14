@@ -1,0 +1,62 @@
+% Author: Izaak Neutelings (June 2017)
+% taken from https://tex.stackexchange.com/questions/159445/draw-in-cylindrical-and-spherical-coordinates
+% \documentclass[border=3pt,tikz]{standalone}
+% \usepackage{physics}
+% \usepackage{tikz}
+% \usepackage{tikz-3dplot}
+% \usepackage[outline]{contour} % glow around text
+% \usepackage{xcolor}
+
+\colorlet{veccol}{green!50!black}
+\colorlet{projcol}{blue!70!black}
+\colorlet{myblue}{blue!80!black}
+\colorlet{myred}{red!90!black}
+\colorlet{mydarkblue}{blue!50!black}
+\tikzset{>=latex} % for LaTeX arrow head
+\tikzstyle{proj}=[projcol!80,line width=0.08] %very thin
+\tikzstyle{area}=[draw=veccol,fill=veccol!80,fill opacity=0.6]
+\tikzstyle{vector}=[-stealth,myblue,thick,line cap=round]
+\tikzstyle{unit vector}=[->,veccol,thick,line cap=round]
+\tikzstyle{dark unit vector}=[unit vector,veccol!70!black]
+\contourlength{1.3pt}
+
+% 3D AXIS with spherical coordinates, dA
+\tdplotsetmaincoords{60}{103}
+\begin{tikzpicture}[scale=2.8,tdplot_main_coords]
+  
+  % VARIABLE
+  \def\rvec{1.0}
+  \def\thetavec{35}
+  \def\phivec{45}
+  \def\dtheta{10}
+  \def\dphi{16}
+  \def\sphere#1#2#3{plot[domain=#1]({\rvec*sin(#2)*cos(#3)},{\rvec*sin(#2)*sin(#3)},{\rvec*cos(#2)})}
+  \contourlength{0.8pt}
+  
+  % AXES
+  \coordinate (O) at (0,0,0);
+  % \draw[thick,->] (0,0,0) -- (1.16*\rvec,0,0) node[left=2,below]{$x$};
+  % \draw[thick,->] (0,0,0) -- (0,1.1*\rvec,0) node[below=2,right=0]{$y$};
+  % \draw[thick,->] (0,0,0) -- (0,0,1.1*\rvec) node[above]{$z$};
+  
+  % COORDINATES
+  \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+  \tdplotsetcoord{PB}{\rvec}{\thetavec+\dtheta}{\phivec}
+  \tdplotsetcoord{PR}{\rvec}{\thetavec}{\phivec+\dphi}
+  \tdplotsetcoord{PBR}{\rvec}{\thetavec+\dtheta}{\phivec+\dphi}
+  
+  
+  % PROJECTIONS
+  \draw[proj] %\thetavec+\dtheta
+    plot[domain=0:90]({\rvec*sin(\x)*cos(\phivec)},{\rvec*sin(\x)*sin(\phivec)},{\rvec*cos(\x)}) coordinate (BL);
+  \draw[proj]
+    plot[domain=0:90]({\rvec*sin(\x)*cos(\phivec+\dphi)},{\rvec*sin(\x)*sin(\phivec+\dphi)},{\rvec*cos(\x)}) coordinate (BR);
+  \draw[proj]
+    plot[domain=0:90]({\rvec*cos(\x)},{\rvec*sin(\x)},0);
+  % \draw[proj] (O)  -- (BL); % PBxy
+  % \draw[proj] (O)  -- (BR); % PBRxy
+  % \draw[proj] (P)  -- (Pz);
+  % \draw[proj] (PR)  -- (Pz) node[midway,above=-2,rotate=-24] {\contour{white}{$r\sin\theta$}};
+  
+\end{tikzpicture}
+
