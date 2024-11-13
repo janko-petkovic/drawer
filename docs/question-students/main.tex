@@ -127,8 +127,43 @@
 
   \end{enumerate}
 
+  \begin{equation*}
+    MSE = \frac{1}{N}\sum_{i}(y_i - ax_i - b)^2
+  \end{equation*}
 
+  \begin{equation*}
+    y_i = a x_i + b
+  \end{equation*}
 
+  \begin{equation*}
+    \left\{
+    \begin{aligned}
+      &\frac{\Delta MSE}{\Delta a} \simeq \frac{\partial MSE}{\partial a} =
+      0\\[6pt]
+      &\frac{\Delta MSE}{\Delta b} \simeq \frac{\partial MSE}{\partial b} = 0
+    \end{aligned} \right. \quad \longrightarrow \quad
+    \left\{
+    \begin{aligned}
+      &a = \frac{\sum_{i}(y_i - \bar{y})(x_i -
+      \bar{x})}{\sum_{i}(x_i-\bar{x})^2}\\[6pt]
+      &b = \bar{y} - a \bar{x}
+    \end{aligned}\right.
+  \end{equation*}
+
+  \begin{equation}
+    P(\text{spiking}|x) = \frac{1}{1 + e^{-\frac{x - \mu}{s}}}
+  \end{equation}
+  \begin{equation}
+    \mathcal{L} = \sum_{i}l_i, \quad l_i = \left\{
+    \begin{aligned}
+      &-\log p_i, &&\text{if }y_i = 1\\
+      &-\log (1 - p_i), &&\text{if }y_i = 0\\
+    \end{aligned}\right.
+  \end{equation}
+
+  \begin{equation}
+    Y(t) = W_2 \, \sigma(W_1 \, X(t) + b_1) + b_2
+  \end{equation}
   % \printbibliography
 
 \end{document}

@@ -1,0 +1,20 @@
+[simulator_setup]
+delta_t = 0.07 # time interval to consider for analysis
+T = 10 # simulation duration
+eval_points = 1000 # number of time points to use for the statistics
+num_simulations = 10000 # number of samples to take for the joint
+num_workers = 16 # number of workers to use for the simulation
+
+[params_prior]
+theta=[-5,0.5]
+
+[inference_setup]
+device='cpu' # device to use for the inference
+subsample_size=10000 # how many points from the joint to take for training
+
+neural_post_model='maf' # sbi model for the neural posterior
+train_batch_size=64 # batch size for the neural post training
+
+posterior_method='mcmc' # method for the sampling!
+posterior_submethod='slice_np_vectorized' # the other thing in the sampling!
+posterior_sample_size=10000 # how many samples for the posterior
