@@ -33,3 +33,4 @@ print('Here is another cell')
 print(f'Does it keep track of variables? {ax}')
 ```
 
+It actually does, I am blown away.

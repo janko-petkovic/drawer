@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quarto Basics</title>
+<title>notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,53 +20,19 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="test_files/libs/clipboard/clipboard.min.js"></script>
-<script src="test_files/libs/quarto-html/quarto.js"></script>
-<script src="test_files/libs/quarto-html/popper.min.js"></script>
-<script src="test_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="test_files/libs/quarto-html/anchor.min.js"></script>
-<link href="test_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="test_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="test_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="test_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="test_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="notes_files/libs/clipboard/clipboard.min.js"></script>
+<script src="notes_files/libs/quarto-html/quarto.js"></script>
+<script src="notes_files/libs/quarto-html/popper.min.js"></script>
+<script src="notes_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="notes_files/libs/quarto-html/anchor.min.js"></script>
+<link href="notes_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="notes_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="notes_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="notes_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="notes_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -77,68 +43,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Quarto Basics</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>For a demonstration of a line plot on a polar axis, see <a href="#fig-polar" class="quarto-xref">Figure&nbsp;1</a>.</p>
-<div id="cell-fig-polar" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)<span class="op">;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])<span class="op">;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)<span class="op">;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div id="fig-polar" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="test_files/figure-html/fig-polar-output-1.png" width="450" height="439" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: A line plot on a polar axis
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Here I’ve drawn some example code from the thing in the thing</p>
-<div id="0a651e89" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Here is another cell'</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Does it keep track of variables? </span><span class="sc">{</span>ax<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Here is another cell
-Does it keep track of variables? PolarAxes(0.2375,0.11;0.55x0.77)</code></pre>
-</div>
-</div>
-<p>It actually does, I am blown away.</p>
+<section id="hans-maric" class="level1">
+<h1>Hans Maric</h1>
+<section id="gephryin" class="level2">
+<h2 class="anchored" data-anchor-id="gephryin">Gephryin</h2>
+<p>There’s like 277 types of gephryn.</p>
+<ul>
+<li>Is the distribution of subtype abundance a fingerprint of some specific evolutionary behaviour?</li>
+</ul>
+<p>G. creates a hexagonal latice. In terms of affinity: Gly &gt; GABAR &gt; other channels.</p>
+</section>
+<section id="psd-95" class="level2">
+<h2 class="anchored" data-anchor-id="psd-95">PSD-95</h2>
+<p>It has more than 300 PDZ1-2 tandem domains. Moreover, the binding sequence is highly conserved between SAP97, PSD-93 and PSD-95. The idea is that we want to produce ligands for these PDZ1-2 and PDZ-3 regions. I don’t quite understand everything, the talk is kind of evaluating how we can approach this issue?</p>
+</section>
+<section id="ankyrin" class="level2">
+<h2 class="anchored" data-anchor-id="ankyrin">Ankyrin</h2>
+<p>Kind of present everywhere, but less abundant at the spines and the dendrites. There are 2 independend binding sites, one specialized for ion channels and one for CAMs (calcium associated molecules?).</p>
+<p><strong>G/B binding site</strong>: The G/B binding site is highly conserved, probably to allow for a conserved kinase interaction. Nav1.9 seems to be the endogenous superbinder of the Ankyrin scaffold.</p>
+<p><strong>Cell Adhesion Molecules</strong>: relies again on the G/B site and requires serine phosphorylation.</p>
+<p>Ankyrin seems to be strongly connected to one of the autism related proteins. Plugging the antibodies.</p>
+</section>
+</section>
+<section id="tt" class="level1">
+<h1>TT</h1>
+<p><em>Energy dynamics of synapses</em></p>
+<ol type="1">
+<li>A whole lot of appreciation of the experimental possibilities (‘the golden age of molecular data’).</li>
+<li>The question: what about the general theory? (population level view of molecular dynamics)</li>
+<li>States an actual question to the public, jokingly. This actually regards the best prediction of the model. Interestingly, public asks additional specific questions, looks like the “initial slides effect” where people are focused bc there is a lot of sugar in the medicine. People start making their own model.</li>
+<li>Now the hypothesis: we think that the features we observe come from energy optimization. Public is again asked if they have questions.</li>
+<li>Explains the model.</li>
+<li>Tuganir study with huge gradient in half-lives</li>
+</ol>
+</section>
+<section id="jean-louis-bessereau" class="level1">
+<h1>Jean-Louis Bessereau</h1>
+<p><em>Specification of postsynaptic identity by extracellular matrix proteins</em> Extracellular scaffolders</p>
+</section>
 
 </main>
 <!-- /main column -->
@@ -177,18 +122,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -220,7 +154,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -228,7 +184,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

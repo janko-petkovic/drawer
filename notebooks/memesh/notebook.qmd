@@ -1,0 +1,70 @@
+Suppose that $V_i$ is the measurement of the spine size at time $t = t_i$.
+
+Assume also that this measurements consists of a constant true value $V$ and a
+IID measurement error $X_i$. $V_i$ is therefore a set of independent, IID random
+variables
+
+$$
+  V_i = v + X_i, \quad i = 1, ..., n
+$$
+
+Let the mean and covariance of the error be respectively 
+
+\begin{align}
+&\langle X \rangle = \bar{X}\\
+&\langle (X_i - \bar{X})(X_j - \bar{X}) \rangle = \sigma^2 \, \delta_{ij}
+\end{align}
+
+Consequently, the two momenta for $V$ can be derived as:
+\begin{align}
+&\langle V \rangle = \bar{V} = v + \bar{X}\\
+&\langle (V_i - \bar{V})(V_j - \bar{V}) \rangle =
+\langle (X_i - \bar{X})(X_j - \bar{X}) \rangle =
+\sigma^2 \, \delta_{ij}
+\end{align}
+
+
+Now, we are interested in the *variation* of size $\Delta_i$, defined as
+$$
+  \Delta_i = V_{i+1} - V_i = X_{i+1} - X_{i}
+$$
+
+We can again derive directly the first two momenta. For the mean, one obtains
+$$
+\langle \Delta \rangle = \langle X \rangle -\langle X \rangle = 0
+$$
+
+For the covariance, on the other hand, one can compute
+
+$$
+  \langle (\Delta_i - \langle \Delta \rangle)(\Delta_j - \langle \Delta \rangle)
+  = \langle (X_{i+1} - X_i)(X_{j+1} - X_j)\rangle 
+$$
+
+By adding and subtracting $\bar{X}$ in both brackets, one obtains that the
+covariance is the sum of three factors:
+
+$$
+  Cov(\Delta) = \sigma^2 \, (2 \delta_{ij} - \delta_{i+1, j} - \delta_{i, j+1})
+$$
+
+
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
+
+xi = np.random.randn(1000)
+
+rs = []
+for i in range(1,10):
+  di = xi[i:] - xi[:-i]
+  rs.append(pearsonr(di[:-1], di[1:])[0])
+
+plt.plot(range(1,10), rs)
+```
+
+**Observations**:
+- this definition of volume measurement removes any temporal structure from the
+  spine data. Do we see difference between normal and shuffled data?
