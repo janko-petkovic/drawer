@@ -147,18 +147,6 @@
   \end{enumerate}
 
   \begin{figure}
-    \begin{tikzpicture}
-      \draw (0,0) circle (2);
-      \draw (0,0) -- (0:2);
-      \draw[fill=black] (0:2) circle (2pt);
-      \node[font=\large] at (0:2.5){$y$};
-      \draw[fill=black] (110:2) circle (2pt);
-      \draw (0,0) -- (110:2);
-      \node[font=\large] at (110:2.5){$u$};
-    \end{tikzpicture}
-  \end{figure}
-
-  \begin{figure}
     \input{figures/packings.tikz}
   \end{figure}
 
@@ -168,10 +156,53 @@
     $\alpha = \frac{1}{2}\arccos(\epsilon)$.
   \end{theorem}
 
-  \begin{figure}
-    \input{figures/theorem-one.tikz}
-  \end{figure}
-  \printbibliography
+  % \begin{figure}
+  %   \input{figures/theorem-one.tikz}
+  % \end{figure}
 
+  \newpage
+  \section{Summary}
+  \textbf{Metric spaces and $\epsilon$-orthogonality}:
+  \begin{enumerate}
+    \item on the sphere $\SN = \{x \in R^n : ||x|| = 1\}$, we define the
+      \textbf{angle metric} as $\angle(x,y) = \arccos(x\cdot y)$. With
+      respect to this metric, $\SN$ has diameter $\pi$. 
+      By definition, $\angle(x,-y) := \angle(-x,y)$;
+    \item define the \textbf{elliptic space} $\PN$ as the set of all
+      unordered antipodal pairs in $S^{n-1}$. Here we define a similar metric,
+      namely $\angle(x,y) = \min\{\angle(x,y), \angle(-x,y) \}$. The diameter of
+      $\PN$ is therefore $\pi/2$;
+    \item we call \textbf{spherical (elliptical) code} a subset of $\SN$
+      $(\PN)$;
+    \item for any \textbf{finite subset $X$} of $\SN$, the \textbf{skewness of
+      $X$} is the non-negative number
+      $$ \mu(X) := \sup\{|x \cdot y| : x \neq y \in X\}$$
+    \item we call $X$ \textbf{$\epsilon$-orthogonal} if $\mu(X) < \epsilon$;
+    \item for any code $E \in \SN$, the \textbf{$\epsilon$-dimension}
+      $\dim_{\epsilon}(E)$ of $E$ is the larges number of elements in an
+      $\epsilon$-orthogonal $X \subseteq E$.
+  \end{enumerate}
+
+  \textbf{Caps, neighbourhoods, packings}
+  \begin{enumerate}
+    \item for some $\alpha>0$ and $s \in E$ we define the \textbf{closed
+      $\alpha$-neighbourhood} $N_{\alpha}(s) = \{x\in E : h(x,s) < \alpha\}$;
+    \item We call a neighbourhood \textbf{a cap} if we are working on a sphere;
+    \item we can define the neighbourhood of a code $E$ as the union of its
+      elements' neighbourhoods;
+    \item a family $\mathcal{F}$ of sets $F \subset E$ is a \textbf{packing of
+      $E$} if for all $F \neq F'$, $F \cap F' = \varnothing$;
+    \item we call $E$ an \textbf{$\alpha$-packing} if $N_{\alpha}(T)$
+      is a packing covering.
+    \item we write $\pack(E)$ for the largest number of elements in any
+      $\alpha$-packing;
+    \item we call an $\alpha$-packing $E$ \textbf{maximum} if no other packing
+      has more elements.
+  \end{enumerate}
+
+  \begin{theorem}
+    For any $\epsilon \in (0,1)$, $dim_{\epsilon}(n) = dim_{\epsilon}(\PN) = \pack(\PN)$, where
+    $\alpha = \frac{1}{2}\arccos(\epsilon)$.
+  \end{theorem}
 
 \end{document}

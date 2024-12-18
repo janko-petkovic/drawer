@@ -72,6 +72,18 @@ At the time of writing we have two Ubuntu servers, with same specifics:
 If you followed the previous step but you are still are getting `false`, that's
 where the troubleshooting begins. Best of luck. 
 
+### `ssh` setup
+By default, `ufw` blocks incoming and outgoing traffic for each port. To allow
+ssh login from remote clients, we proceed as follows:
+1. `/etc/ssh/sshd_config`
+    - change the default port to 12345 (default 22 is not very safe)
+    - decide if to use password authentication or key-pair authentication
+      (everything is enabled by default I think)
+2. open the selected port in the firewall: `ufw allow <port_nr>/tcp comment
+   'open alternative ssh port'`
+3. limit incoming login attempts: `ufw limit <port_nr>/tcp comment 'SSH port
+   rate limit'`
+
 **Notes to self**:
 - try installing manually the drivers, deselecting the third-party drivers
   during the main installation
