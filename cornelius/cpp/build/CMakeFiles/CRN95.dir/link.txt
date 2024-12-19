@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -Wall -Wextra -fPIC -lpython3.11 -flto -shared  -o CRN95.cpython-311-x86_64-linux-gnu.so CMakeFiles/CRN95.dir/simulation.cpp.o CMakeFiles/CRN95.dir/pywrap.cpp.o 

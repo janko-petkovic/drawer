@@ -1,8 +1,0 @@
-/home/janko/code/trashcan/cmake/build/CMakeFiles/jlib.dir
-/home/janko/code/trashcan/cmake/build/CMakeFiles/test.dir
-/home/janko/code/trashcan/cmake/build/CMakeFiles/edit_cache.dir
-/home/janko/code/trashcan/cmake/build/CMakeFiles/rebuild_cache.dir
-/home/janko/code/trashcan/cmake/build/CMakeFiles/list_install_components.dir
-/home/janko/code/trashcan/cmake/build/CMakeFiles/install.dir
-/home/janko/code/trashcan/cmake/build/CMakeFiles/install/local.dir
-/home/janko/code/trashcan/cmake/build/CMakeFiles/install/strip.dir
