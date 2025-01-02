@@ -1,2 +1,0 @@
-/usr/bin/ar qc libjlib.a CMakeFiles/jlib.dir/src/h1.cpp.o CMakeFiles/jlib.dir/src/h2.cpp.o
-/usr/bin/ranlib libjlib.a

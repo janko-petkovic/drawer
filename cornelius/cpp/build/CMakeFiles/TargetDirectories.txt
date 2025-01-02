@@ -1,3 +1,0 @@
-/home/janko/code/trashcan/cornelius/cpp/build/CMakeFiles/CRN95.dir
-/home/janko/code/trashcan/cornelius/cpp/build/CMakeFiles/edit_cache.dir
-/home/janko/code/trashcan/cornelius/cpp/build/CMakeFiles/rebuild_cache.dir
