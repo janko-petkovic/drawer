@@ -1,23 +1,56 @@
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
+from ctypes import cdll
+from ctypes import c_float, POINTER
 
 
-def py_integrate_g_against_spikes(g0, t_end, dt, t_spikes):
-    '''returns some numpy stuff'''
+def e1_integrator_lorenzo(dt, T, alpha, tau, spike_times):
     
-    if t_spikes[0] < 0: raise ValueError('Spikes start before t=0')
-    if t_end < t_spikes[-1]: raise ValueError('Spikes continue after t_end')
+    times = np.arange(0,T,dt)
+    t_next_spike = spike_times.pop(0) if spike_times else np.inf
 
-    g_t = 
+    x_t = [0.]
+    x = 0.
+    
+    for t in times:
+        if t >= t_next_spike:
+            t_next_spike = spike_times.pop(0) if spike_times else np.inf
+            x += alpha * (1 - x_t[-1])
+        else:
+            x += dt * (-x/tau)
 
-    for left_t_spike, right_t_spike in zip(t_spikes[:-1], t_spikes[1:]):
-        n_steps = int((right_t_spike - left_t_spike)/dt) + 1
-        
-        for _ in n_steps:
-
-
-
+        x_t.append(x)
+    
+    return np.array(x_t)
 
 
 if __name__ == '__main__':
+    
+    lib = cdll.LoadLibrary('./integrator_lorenzo_cpp.so')
+    lib.e1_integrator_lorenzo_cpp.argtypes = [
+        c_float,
+        c_float,
+        c_float,
+        c_float,
+        POINTER(c_float)
+    ]
+    
+    rng = np.random.default_rng(2025)
+
+    dt = 0.001
+    T = 10
+    alpha = 0.1
+    tau = 0.1
+
+    n_spikes = 100
+    spike_times = list(np.sort(rng.uniform(0, T, size=(n_spikes))))
+    
+    g_t = e1_integrator_lorenzo(dt, T, alpha, tau, spike_times)
+    g_t = lib.e1_integrator_lorenzo_cpp(dt, T, alpha, tau, spike_times)
+    
+
+    # plt.plot(g_t)
+    # plt.show()
+    
+
 
