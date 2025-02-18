@@ -34,7 +34,9 @@ All in all, C will only take immutable objects, also from Python. Forget passing
 
 **Memory management:** Python is garbage collected while in C you need to remember to do it manually.
 
-## Writing some code
+
+
+## Let's write some code
 
 `invoke` super cool tool that should have a similar purpose to `make` (with its `cmake`).
 
@@ -44,13 +46,11 @@ It relies on a file called `tasks.py` describing all the routines that can be ex
 
 Before all of this, let's first see a more down to earth approach.
 
-
-
 ### `ctypes` module
 
 You write your library in C or C++ , compile it _as a dynamically linked library_ (`.dll` on windows, `.so` on linux) and then import it in the python script. Here's an example:
 
-1. header 
+1. header. Notice the `__cplusplus` and `extern "C"` semantics - if you skip it, you will not be able to call the function in the python code ([more info here](https://stackoverflow.com/questions/10422034/when-to-use-extern-in-c)).
 
 ```cpp
 // mafs.hpp
@@ -110,7 +110,7 @@ def build_mafs(c, path=None):
     # I don't know while we do two step compilation
     invoke.run("g++ -c -Wall -Werror -fPIC mafs.cpp")
     invoke.run("g++ -shared mafs.o -o libjmafs.so")
-    
+
     # optionally remove the objects
     invoke.run("rm jmath.o") 
 
@@ -121,9 +121,9 @@ After saving, we can now run `invoke build-adder` (you can also find it in the `
 
 So, `ctypes` is nice for small things, and it's also handy because it's already present in the python standard library. Let's now find a way to manage bigger things.
 
-
-
 ### `CFFI` module (C Forein Function Interface)
+
+Important: this is only for C! I have not managed to run it with C++ due to the fact that C++ needs the `extern "C" {...}`. This cannot be handled by `CFFI`.
 
 There are multiple ways to use this interface:
 
@@ -142,29 +142,27 @@ As far as I understand, the main work happens in the `tasks.py` file, with the s
 
 import cffi
 
-@invoke.task
-def build_mafs(c, path=None):
+@invoke.task(build_mafs) # notice how we first compile the .so from C
+def build_mafs_cffi(c, path=None):
 
     print('Building Python module: mafs')
     ffi = cffi.FFI()
 
     # (1)
-    with open('./mafs.hpp') as hppfile:
+    with open('./mafs.h') as hfile:
         ffi.cdef(hppfile)
 
     # (2)
     ffi.set_source(
         'mafs_module', # name of the python module
-        '#include "mafs.hpp"', # for now we need this, can be customized
-        libraries=['mafs'], # name of pre-existing c library
+        '#include "mafs.h"', # for now we need this, can be customized
+        libraries=['mafs'], # name of the C shared lib (build_mafs!)
         library_dirs=['.'], # folders with libraries
         extra_link_args=['-Wl,-rpath,.'], # look here for additional libs you need to load
     )
-    
+
     # (3)
     ffi.compile()
 ```
 
 1. CFFI provides an automated routine for **parsing the headers** and **understanding automatically the datatypes** that well need to be marshalled (automatically creates marshalling wrappers)
-
-
