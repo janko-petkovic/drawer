@@ -1,0 +1,6 @@
+/home/janko/code/drawer/python-c/cmake/Step2/build/CMakeFiles/Tutorial.dir
+/home/janko/code/drawer/python-c/cmake/Step2/build/CMakeFiles/edit_cache.dir
+/home/janko/code/drawer/python-c/cmake/Step2/build/CMakeFiles/rebuild_cache.dir
+/home/janko/code/drawer/python-c/cmake/Step2/build/MathFunctions/CMakeFiles/MathFunctions.dir
+/home/janko/code/drawer/python-c/cmake/Step2/build/MathFunctions/CMakeFiles/edit_cache.dir
+/home/janko/code/drawer/python-c/cmake/Step2/build/MathFunctions/CMakeFiles/rebuild_cache.dir
