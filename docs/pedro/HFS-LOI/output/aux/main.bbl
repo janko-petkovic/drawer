@@ -1,0 +1,670 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Horne1995TheRO}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b6278b31436de296657175c745edabf6}{%
+           family={Horne},
+           familyi={H\bibinitperiod},
+           given={Malcolm\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=defa5b4df27438e9af589e7e6a644fe0}{%
+           family={Butler},
+           familyi={B\bibinitperiod},
+           given={Ernest\bibnamedelima G.},
+           giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{51369ac3bedcc5dc1aa41f77e085062f}
+      \strng{fullhash}{51369ac3bedcc5dc1aa41f77e085062f}
+      \strng{fullhashraw}{51369ac3bedcc5dc1aa41f77e085062f}
+      \strng{bibnamehash}{51369ac3bedcc5dc1aa41f77e085062f}
+      \strng{authorbibnamehash}{51369ac3bedcc5dc1aa41f77e085062f}
+      \strng{authornamehash}{51369ac3bedcc5dc1aa41f77e085062f}
+      \strng{authorfullhash}{51369ac3bedcc5dc1aa41f77e085062f}
+      \strng{authorfullhashraw}{51369ac3bedcc5dc1aa41f77e085062f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Progress in Neurobiology}
+      \field{title}{The role of the cerebello-thalamo-cortical pathway in skilled movement}
+      \field{volume}{46}
+      \field{year}{1995}
+      \field{pages}{199\bibrangedash 213}
+      \range{pages}{15}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:20886719
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:20886719
+      \endverb
+    \endentry
+    \entry{Gilman1985TheCA}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2bb3778b41cd71f8ee3d2b1b4f4881ad}{%
+           family={Gilman},
+           familyi={G\bibinitperiod},
+           given={Sid},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2bb3778b41cd71f8ee3d2b1b4f4881ad}
+      \strng{fullhash}{2bb3778b41cd71f8ee3d2b1b4f4881ad}
+      \strng{fullhashraw}{2bb3778b41cd71f8ee3d2b1b4f4881ad}
+      \strng{bibnamehash}{2bb3778b41cd71f8ee3d2b1b4f4881ad}
+      \strng{authorbibnamehash}{2bb3778b41cd71f8ee3d2b1b4f4881ad}
+      \strng{authornamehash}{2bb3778b41cd71f8ee3d2b1b4f4881ad}
+      \strng{authorfullhash}{2bb3778b41cd71f8ee3d2b1b4f4881ad}
+      \strng{authorfullhashraw}{2bb3778b41cd71f8ee3d2b1b4f4881ad}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JAMA Neurology}
+      \field{title}{The Cerebellum and Neural Control}
+      \field{volume}{42}
+      \field{year}{1985}
+      \field{pages}{310\bibrangedash 310}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:143645614
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:143645614
+      \endverb
+    \endentry
+    \entry{Bostan2010TheBG}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=33ad24152e49ba82896e7fa4fd951f46}{%
+           family={Bostan},
+           familyi={B\bibinitperiod},
+           given={Andreea\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=85a4a5247401f986a3572cb0f929c3ee}{%
+           family={Dum},
+           familyi={D\bibinitperiod},
+           given={Richard\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d74b453a229fc7bcac80faa4d0ebbd72}{%
+           family={Strick},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e37e1d68fc3377b50b70880cec77a9d}
+      \strng{fullhash}{1540405660a0cf2ddfa31a4b0e39a0be}
+      \strng{fullhashraw}{1540405660a0cf2ddfa31a4b0e39a0be}
+      \strng{bibnamehash}{1540405660a0cf2ddfa31a4b0e39a0be}
+      \strng{authorbibnamehash}{1540405660a0cf2ddfa31a4b0e39a0be}
+      \strng{authornamehash}{7e37e1d68fc3377b50b70880cec77a9d}
+      \strng{authorfullhash}{1540405660a0cf2ddfa31a4b0e39a0be}
+      \strng{authorfullhashraw}{1540405660a0cf2ddfa31a4b0e39a0be}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{title}{The basal ganglia communicate with the cerebellum}
+      \field{volume}{107}
+      \field{year}{2010}
+      \field{pages}{8452\bibrangedash 8456}
+      \range{pages}{5}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:19696797
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:19696797
+      \endverb
+    \endentry
+    \entry{Washburn2024TheCD}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=4bcf288b055756b8b9d462fe931d1ed6}{%
+           family={Washburn},
+           familyi={W\bibinitperiod},
+           given={Samantha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=67361ad402e6ed3fddfd9785c323ad91}{%
+           family={Oñate},
+           familyi={O\bibinitperiod},
+           given={Maritza},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e56a54a9506fb763c1b6bfcbfe1b087e}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={Junichi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7507603a39da62212f4ba4dfd29cf2f8}{%
+           family={Vera},
+           familyi={V\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a49de7d0ad6807448f2df8b645cccbb6}{%
+           family={Bhuvanasundaram},
+           familyi={B\bibinitperiod},
+           given={Ramakrishnan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=59777e19a1c49f8f8431a7cf10c79b02}{%
+           family={Khatami},
+           familyi={K\bibinitperiod},
+           given={Leila},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1baa25d9b2ef0104cf7428b4d113cc36}{%
+           family={Nadim},
+           familyi={N\bibinitperiod},
+           given={Farzan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a3449544bfbe81f21d63aeea8d6220e0}{%
+           family={Khodakhah},
+           familyi={K\bibinitperiod},
+           given={Kamran},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{dfcfc2228cdf8ff2411356ec0e0a3b23}
+      \strng{fullhash}{998f92d40fa8958691bf74105d9761de}
+      \strng{fullhashraw}{998f92d40fa8958691bf74105d9761de}
+      \strng{bibnamehash}{dfcfc2228cdf8ff2411356ec0e0a3b23}
+      \strng{authorbibnamehash}{dfcfc2228cdf8ff2411356ec0e0a3b23}
+      \strng{authornamehash}{dfcfc2228cdf8ff2411356ec0e0a3b23}
+      \strng{authorfullhash}{998f92d40fa8958691bf74105d9761de}
+      \strng{authorfullhashraw}{998f92d40fa8958691bf74105d9761de}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature neuroscience}
+      \field{title}{The cerebellum directly modulates the substantia nigra dopaminergic activity.}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:267255559
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:267255559
+      \endverb
+    \endentry
+    \entry{Wagner2017CerebellarGC}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=f4ee2430d24c9287fac0f0ffe0a8989d}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Mark\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f8f43b7d699ce5e15d7c64e30ff56aef}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Tony\bibnamedelima Hyun},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=8cf875310f22ba6f3a20e4697e7177a9}{%
+           family={Savall},
+           familyi={S\bibinitperiod},
+           given={Joan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=89cc4569be317c5ace970611722f5b76}{%
+           family={Schnitzer},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7d768b8628495dd611b0067e2d8d1d7f}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Liqun},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{a94c5ac9b400d83c453242677d40cc86}
+      \strng{fullhash}{12e0d48b90bc898f4dfb0ce7701dad97}
+      \strng{fullhashraw}{12e0d48b90bc898f4dfb0ce7701dad97}
+      \strng{bibnamehash}{12e0d48b90bc898f4dfb0ce7701dad97}
+      \strng{authorbibnamehash}{12e0d48b90bc898f4dfb0ce7701dad97}
+      \strng{authornamehash}{a94c5ac9b400d83c453242677d40cc86}
+      \strng{authorfullhash}{12e0d48b90bc898f4dfb0ce7701dad97}
+      \strng{authorfullhashraw}{12e0d48b90bc898f4dfb0ce7701dad97}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{Cerebellar granule cells encode the expectation of reward}
+      \field{volume}{544}
+      \field{year}{2017}
+      \field{pages}{96\bibrangedash 100}
+      \range{pages}{5}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:4450884
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:4450884
+      \endverb
+    \endentry
+    \entry{Ohmae2015ClimbingFE}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=62e150cde22dae45c8ccfffc4fad4dc0}{%
+           family={Ohmae},
+           familyi={O\bibinitperiod},
+           given={Shogo},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9e44122bef58bb32d3674394586bead6}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={Javier\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{66e66deca3a8a8d5d084b5b5496a36f9}
+      \strng{fullhash}{66e66deca3a8a8d5d084b5b5496a36f9}
+      \strng{fullhashraw}{66e66deca3a8a8d5d084b5b5496a36f9}
+      \strng{bibnamehash}{66e66deca3a8a8d5d084b5b5496a36f9}
+      \strng{authorbibnamehash}{66e66deca3a8a8d5d084b5b5496a36f9}
+      \strng{authornamehash}{66e66deca3a8a8d5d084b5b5496a36f9}
+      \strng{authorfullhash}{66e66deca3a8a8d5d084b5b5496a36f9}
+      \strng{authorfullhashraw}{66e66deca3a8a8d5d084b5b5496a36f9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature neuroscience}
+      \field{title}{Climbing fibers encode a temporal-difference prediction error during cerebellar learning in mice}
+      \field{volume}{18}
+      \field{year}{2015}
+      \field{pages}{1798\bibrangedash 1803}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:16613552
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:16613552
+      \endverb
+    \endentry
+    \entry{Strick2009CerebellumAN}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=d74b453a229fc7bcac80faa4d0ebbd72}{%
+           family={Strick},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=85a4a5247401f986a3572cb0f929c3ee}{%
+           family={Dum},
+           familyi={D\bibinitperiod},
+           given={Richard\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=33f41f729491b388d0aaeae190dd04a8}{%
+           family={Fiez},
+           familyi={F\bibinitperiod},
+           given={Julie\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b09329b86dcd74fe0df4df757ee8d1a9}
+      \strng{fullhash}{161f87b8277bedc7b97470a346b638af}
+      \strng{fullhashraw}{161f87b8277bedc7b97470a346b638af}
+      \strng{bibnamehash}{161f87b8277bedc7b97470a346b638af}
+      \strng{authorbibnamehash}{161f87b8277bedc7b97470a346b638af}
+      \strng{authornamehash}{b09329b86dcd74fe0df4df757ee8d1a9}
+      \strng{authorfullhash}{161f87b8277bedc7b97470a346b638af}
+      \strng{authorfullhashraw}{161f87b8277bedc7b97470a346b638af}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual review of neuroscience}
+      \field{title}{Cerebellum and nonmotor function.}
+      \field{volume}{32}
+      \field{year}{2009}
+      \field{pages}{413\bibrangedash 34}
+      \range{pages}{22}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:1066141
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:1066141
+      \endverb
+    \endentry
+    \entry{Overwalle2014SocialCA}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=43a689c13924a52bf0695e944ccf17d8}{%
+           family={Overwalle},
+           familyi={O\bibinitperiod},
+           given={Frank\bibnamedelima Van},
+           giveni={F\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=593f48d123d5fdb818e07828df08722c}{%
+           family={Baetens},
+           familyi={B\bibinitperiod},
+           given={Kris},
+           giveni={K\bibinitperiod}}}%
+        {{hash=021538748167345b745342413c5cd319}{%
+           family={Mariën},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=374d27639f632007cf938e354d4a7c75}{%
+           family={Vandekerckhove},
+           familyi={V\bibinitperiod},
+           given={Marie},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9056ec01d15dbb549d3ea961869e03f8}
+      \strng{fullhash}{8a99abe7e1e5e24e3f3731489a36425b}
+      \strng{fullhashraw}{8a99abe7e1e5e24e3f3731489a36425b}
+      \strng{bibnamehash}{8a99abe7e1e5e24e3f3731489a36425b}
+      \strng{authorbibnamehash}{8a99abe7e1e5e24e3f3731489a36425b}
+      \strng{authornamehash}{9056ec01d15dbb549d3ea961869e03f8}
+      \strng{authorfullhash}{8a99abe7e1e5e24e3f3731489a36425b}
+      \strng{authorfullhashraw}{8a99abe7e1e5e24e3f3731489a36425b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NeuroImage}
+      \field{title}{Social cognition and the cerebellum: A meta-analysis of over 350 fMRI studies}
+      \field{volume}{86}
+      \field{year}{2014}
+      \field{pages}{554\bibrangedash 572}
+      \range{pages}{19}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:14657938
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:14657938
+      \endverb
+    \endentry
+    \entry{Schmahmann2006CognitionEA}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a117c2509bcf0c8c35815e8a4117265e}{%
+           family={Schmahmann},
+           familyi={S\bibinitperiod},
+           given={Jeremy\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=cf2db81dec00339c623de82fb8aa5fb1}{%
+           family={Caplan},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3d3fdaed850090351125d396968394c}
+      \strng{fullhash}{a3d3fdaed850090351125d396968394c}
+      \strng{fullhashraw}{a3d3fdaed850090351125d396968394c}
+      \strng{bibnamehash}{a3d3fdaed850090351125d396968394c}
+      \strng{authorbibnamehash}{a3d3fdaed850090351125d396968394c}
+      \strng{authornamehash}{a3d3fdaed850090351125d396968394c}
+      \strng{authorfullhash}{a3d3fdaed850090351125d396968394c}
+      \strng{authorfullhashraw}{a3d3fdaed850090351125d396968394c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain : a journal of neurology}
+      \field{title}{Cognition, emotion and the cerebellum.}
+      \field{volume}{129 Pt 2}
+      \field{year}{2006}
+      \field{pages}{290\bibrangedash 2}
+      \range{pages}{3}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:46622431
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:46622431
+      \endverb
+    \endentry
+    \entry{DeSchepper2021ModelSU}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=5bf9f4758b7356bfbb74a7995c8d2a23}{%
+           family={Schepper},
+           familyi={S\bibinitperiod},
+           given={Robin\bibnamedelima De},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=159b4cebd2432f410e6d83722deb1e06}{%
+           family={Geminiani},
+           familyi={G\bibinitperiod},
+           given={Alice},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9500a520224e1f8f0a6557e5bc881b2a}{%
+           family={Masoli},
+           familyi={M\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=29b7e855fa4690e1645a82de875c5f62}{%
+           family={Rizza},
+           familyi={R\bibinitperiod},
+           given={Martina\bibnamedelima Francesca},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=3058fe1ab3f92d5f32fe0d9e8bb15ead}{%
+           family={Antonietti},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8dda6438e2ab73f4d33c25e56e7d3150}{%
+           family={Casellato},
+           familyi={C\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2b9c88935cc112278c10b8e092851743}{%
+           family={D’Angelo},
+           familyi={D\bibinitperiod},
+           given={Egidio},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{e25887a06fd8e59e2792da5c5aae88bc}
+      \strng{fullhash}{c4a04fda7ba86dbcbe36da5af00ed001}
+      \strng{fullhashraw}{c4a04fda7ba86dbcbe36da5af00ed001}
+      \strng{bibnamehash}{e25887a06fd8e59e2792da5c5aae88bc}
+      \strng{authorbibnamehash}{e25887a06fd8e59e2792da5c5aae88bc}
+      \strng{authornamehash}{e25887a06fd8e59e2792da5c5aae88bc}
+      \strng{authorfullhash}{c4a04fda7ba86dbcbe36da5af00ed001}
+      \strng{authorfullhashraw}{c4a04fda7ba86dbcbe36da5af00ed001}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications Biology}
+      \field{title}{Model simulations unveil the structure-function-dynamics relationship of the cerebellar cortical microcircuit}
+      \field{volume}{5}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:242060665
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:242060665
+      \endverb
+    \endentry
+    \entry{DAngelo2016ModelingTC}{article}{}{}
+      \name{author}{12}{}{%
+        {{hash=2b9c88935cc112278c10b8e092851743}{%
+           family={D’Angelo},
+           familyi={D\bibinitperiod},
+           given={Egidio},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3058fe1ab3f92d5f32fe0d9e8bb15ead}{%
+           family={Antonietti},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+        {{hash=26377349f7ff0707305a098c54aabb4a}{%
+           family={Casali},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8dda6438e2ab73f4d33c25e56e7d3150}{%
+           family={Casellato},
+           familyi={C\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4eeeaa4ff41d8eb9e10e694ef9ee0cc7}{%
+           family={Garrido},
+           familyi={G\bibinitperiod},
+           given={Jesús\bibnamedelima Alberto},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e28767b577df13554dd6fc8909a9c331}{%
+           family={Luque},
+           familyi={L\bibinitperiod},
+           given={Niceto\bibnamedelima R.},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=d66e3ca70ea3ab33cb0cc32cc8b9694d}{%
+           family={Mapelli},
+           familyi={M\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9500a520224e1f8f0a6557e5bc881b2a}{%
+           family={Masoli},
+           familyi={M\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b0e719c2860b9789137df03ea313ac6a}{%
+           family={Pedrocchi},
+           familyi={P\bibinitperiod},
+           given={Alessandra\bibnamedelimb Laura\bibnamedelima Giulia},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=e5e84124e38fe7052faf68d57d5ad257}{%
+           family={Prestori},
+           familyi={P\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod}}}%
+        {{hash=29b7e855fa4690e1645a82de875c5f62}{%
+           family={Rizza},
+           familyi={R\bibinitperiod},
+           given={Martina\bibnamedelima Francesca},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=d76e42b6465c82aced2f4b7517a48203}{%
+           family={Ros},
+           familyi={R\bibinitperiod},
+           given={Eduardo},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{082a45fbe6e05775c12ecc18addbe29f}
+      \strng{fullhash}{8dd7d6d332c743a2d6c9eaee55e72cff}
+      \strng{fullhashraw}{8dd7d6d332c743a2d6c9eaee55e72cff}
+      \strng{bibnamehash}{082a45fbe6e05775c12ecc18addbe29f}
+      \strng{authorbibnamehash}{082a45fbe6e05775c12ecc18addbe29f}
+      \strng{authornamehash}{082a45fbe6e05775c12ecc18addbe29f}
+      \strng{authorfullhash}{8dd7d6d332c743a2d6c9eaee55e72cff}
+      \strng{authorfullhashraw}{8dd7d6d332c743a2d6c9eaee55e72cff}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Cellular Neuroscience}
+      \field{title}{Modeling the Cerebellar Microcircuit: New Strategies for a Long-Standing Issue}
+      \field{volume}{10}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:11111911
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:11111911
+      \endverb
+    \endentry
+    \entry{Diedrichsen2019UniversalTO}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=a9404aa12aa2dc5fa14cd03640822a6e}{%
+           family={Diedrichsen},
+           familyi={D\bibinitperiod},
+           given={Jörn},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2f93dd149a2964344899db6c01b84fb9}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Maedbh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9da1be6a3cacf8e7d4f90d741c251635}{%
+           family={Hernandez-Castillo},
+           familyi={H\bibinithyphendelim C\bibinitperiod},
+           given={Carlos\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=d0e37970133f5cb82bbcf207d47b22d9}{%
+           family={Sereno},
+           familyi={S\bibinitperiod},
+           given={Martin\bibnamedelima I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=46f250b68664b3a157a14334053bd281}{%
+           family={Ivry},
+           familyi={I\bibinitperiod},
+           given={Richard\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce548333d51f4fc2fe4aca80a2d2bd8a}
+      \strng{fullhash}{666f26a6be11912c7a0854e1a112ba2b}
+      \strng{fullhashraw}{666f26a6be11912c7a0854e1a112ba2b}
+      \strng{bibnamehash}{666f26a6be11912c7a0854e1a112ba2b}
+      \strng{authorbibnamehash}{666f26a6be11912c7a0854e1a112ba2b}
+      \strng{authornamehash}{ce548333d51f4fc2fe4aca80a2d2bd8a}
+      \strng{authorfullhash}{666f26a6be11912c7a0854e1a112ba2b}
+      \strng{authorfullhashraw}{666f26a6be11912c7a0854e1a112ba2b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neuron}
+      \field{title}{[*] Universal Transform or Multiple Functionality? Understanding the Contribution of the Human Cerebellum across Task Domains}
+      \field{volume}{102}
+      \field{year}{2019}
+      \field{pages}{918\bibrangedash 928}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:174804330
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:174804330
+      \endverb
+    \endentry
+    \entry{Houghton2021EditorialIP}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=939f78cb78f0bc36048270805583aa44}{%
+           family={Houghton},
+           familyi={H\bibinitperiod},
+           given={Conor\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4ae3408df8ffb8c3f077df4088110728}{%
+           family={Isope},
+           familyi={I\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=fcdf077d9d0f550905db2d6894c4d359}{%
+           family={Apps},
+           familyi={A\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c8a60d81696f908227857ba8d9c90646}{%
+           family={Cerminara},
+           familyi={C\bibinitperiod},
+           given={Nadia\bibnamedelima L.},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{47a8e1f8ad6f1a8dce19506572b01739}
+      \strng{fullhash}{b0dacb595589e2749997d52942cb9625}
+      \strng{fullhashraw}{b0dacb595589e2749997d52942cb9625}
+      \strng{bibnamehash}{b0dacb595589e2749997d52942cb9625}
+      \strng{authorbibnamehash}{b0dacb595589e2749997d52942cb9625}
+      \strng{authornamehash}{47a8e1f8ad6f1a8dce19506572b01739}
+      \strng{authorfullhash}{b0dacb595589e2749997d52942cb9625}
+      \strng{authorfullhashraw}{b0dacb595589e2749997d52942cb9625}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Systems Neuroscience}
+      \field{title}{[*] Editorial: Information Processing in the Cerebellum}
+      \field{volume}{15}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:237538811
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:237538811
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

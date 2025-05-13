@@ -1,0 +1,106 @@
+\documentclass[a4paper, 10pt]{article}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Margins
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+
+% Mathematics
+\usepackage{amsmath, amssymb, mathtools, amsthm}
+
+% Bibliography (uncomment if needed)
+\usepackage{csquotes}
+\usepackage[backend=biber, sorting=none, style=nature]{biblatex}
+\addbibresource{biblio.bib}
+
+% Personal taste
+\usepackage[font=footnotesize]{caption}
+\usepackage[parfill]{parskip}
+
+
+\title{HFD Letter of Intent}
+\author{}
+
+\begin{document}
+
+\maketitle
+One the strategies biological systems have evolved to interact with the
+surrounding environment is locomotion. This ability is obtained by a number of
+different means, ranging from fundamental protein complexes (cilia, flagella),
+to sophisticated organs driven by complex, sequential motor programs. How these
+programs are learned, encoded, and recalled in the brain represent still an
+active field of research.
+
+It is a widely accepted hypothesis that the cerebellum plays a pivotal role in motor
+control, enabling coordination and fine-tuning during the execution of a motor
+program. How this function is implemented in the cerebellar circuitry and what
+are the driving theoretical principles driving it are still active fields of
+research.
+
+Traditionally, cerebellar computations has been considered segregated from other
+cortical and sub-cortical areas. In particular, it was thought that their
+function was mainly mediated by the cerebello-thalamo-cortical (CTC) loop
+\cite{Horne1995TheRO, Gilman1985TheCA}, where the sensory information fed to the
+cerebellum from the cortical sensory areas is processed and then relayed to
+obtain a movement fine tuning. This view has been substantially challenged
+in the last decades with the discovery of several different pathways strongly
+coupling the cerebellar activity with other subcortical regions and, in
+particular, the dopaminergic and reward systems \cite{Bostan2010TheBG,
+Washburn2024TheCD, Wagner2017CerebellarGC, Ohmae2015ClimbingFE}. This coupling
+has been shown to directly translate to the involvement of the cerebellum in
+tasks not strictly related to motor tuning \cite{Strick2009CerebellumAN,
+Overwalle2014SocialCA, Schmahmann2006CognitionEA}, suggesting that the
+distinguishing feature of the cerebellum could be linked not to its specific
+motor implications but to a more abstract, functional principle. 
+
+Several computational models have been proposed to investigate cerebellar
+computations, focusing on precise functional aspects and leveraging different
+theoretical approaches \cite{DeSchepper2021ModelSU, DAngelo2016ModelingTC,
+Diedrichsen2019UniversalTO, Houghton2021EditorialIP}. A common view, able to
+bridge these results into a unified perspective is still, however, lacking. We aim to
+address this question with an integrated approach, combining model selection
+and inference theory with experimental validation and neuromorphic applications.
+
+First, we are interested in understanding the equivalence of the considered
+models in respect to their emerging behaviour. This question can be framed as a
+degeneracy problem [GoncaSnail], where the study of invariant parameter
+subspaces can be extended to include differences in model functional forms. To
+this end, we will pursue two different approaches. In the first, we will make
+use of simulation based inference [Lueckermann, Macke, etc.], recurring to the
+latest toolkit developments achieved in our group [GoncaSBI, Jaxley]. This
+approach, will not only allow us to explore the equivalence between the
+different models, but also to study their respective parameter spaces in terms of
+emerging computational properties (e.g., movement robustness, energy
+minimization [Jedlicka]) in line with the work presented in [VogelsMeta].
+Moreover, we would be interested to explore if these properties can be directly
+linked to the ability of the model to show low-dimensional mechanics
+[MullerParallel]. To this end, we aim at extending our study to summary
+statistics derived from several different dimensionality reduction techniques,
+both enstablished and still under development in the neuroscientific literature
+[PCA, CCA, dPCA, DMD, SSM, Mante and co]. This will allow us in turn to
+understand also the power of these techniques when applied to (simulated)
+neuronal data, and to outline with more precision their domain of applicability.
+
+The alternative approach we aim at pursuing to address cerebellar modelling is
+closely related to variational inference [Bishop]. This approach has lead to a
+number of breakthroughs in parameter optimization, in particular in the deep
+learning field [VAE, HVAE, DIFFUSION]. By making use of this framework, we aim
+to study how the different models of cerebellar function relate to each other in
+terms of a latent, not accessible feature space. Ultimately, analyzing this
+space would allow us not only to gain a better understanding of their behaviour,
+but to identify which theoretical principles could be underpinning the cerebellar
+ability to precisely regulate motor and learning function.
+
+Ultimately, we plan on refining these principles in a unified model, able to
+provide falsifiable hypotheses on the single cell, the circuit and the
+behavioural level. We also plan on using these principles to design new
+solutions for spiking and neuromorphic networks, offering valuable contribution
+to the computational motor control field. 
+
+
+\printbibliography
+
+\end{document}
