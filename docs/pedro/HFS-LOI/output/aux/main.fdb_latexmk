@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber output/aux/main"] 1747161878.07404 "output/aux/main.bcf" "output/aux/main.bbl" "output/aux/main" 1747161879.45339 0
-  "biblio.bib" 1747072526.47494 5162 d94d419cffda814ffb4f519bffaa1db9 ""
-  "output/aux/main.bcf" 1747161879.41935 108973 26682e172bf4b79934bee86b2dde6635 "pdflatex"
+["biber output/aux/main"] 1747270429.50209 "output/aux/main.bcf" "output/aux/main.bbl" "output/aux/main" 1747271029.4713 0
+  "biblio.bib" 1747270167.00027 10341 c180dd15c98670e37f1dab3e4b172a37 ""
+  "output/aux/main.bcf" 1747271029.42786 109490 953b989eecdc37417444a5236f5e86fc "pdflatex"
   (generated)
   "output/aux/main.bbl"
   "output/aux/main.blg"
   (rewritten before read)
-["pdflatex"] 1747161878.97619 "main.tex" "output/main.pdf" "main" 1747161879.45358 0
+["pdflatex"] 1747271028.9198 "main.tex" "output/main.pdf" "main" 1747271029.47149 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1742685315 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
-  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1742685315 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1742685315 3584 13049b61b922a28b158a38aeff75ee9b ""
+  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/eccc1000.tfm" 1742685315 3072 0e825b3b77feef5bf88d50fba1209c90 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1742685315 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1742685315 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm" 1742685315 3584 3169d30142b88a27d4ab0e3468e963a2 ""
@@ -35,8 +35,8 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1742685315 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1742685315 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1742685315 1120 8b7d695260f3cff42e636090a8002094 ""
-  "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb" 1742685315 145408 43d44302ca7d82d487f511f83e309505 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb" 1742685315 135942 859a90cad7494a1e79c94baf546d7de5 ""
+  "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb" 1742685315 109713 30d6420127e1c84309fa7008a69b7170 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1742685315 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1742685315 136101 f533469f523533d38317ab5729d00c8a ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb" 1742685315 131438 3aa300b3e40e5c8ba7b4e5c6cebc5dd6 ""
@@ -68,10 +68,7 @@
   "/usr/share/texmf-dist/tex/latex/base/ifthen.sty" 1742685315 5525 9dced5929f36b19fa837947f5175b331 ""
   "/usr/share/texmf-dist/tex/latex/base/inputenc.sty" 1742685315 5048 0270515b828149155424600fd2d58ac5 ""
   "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1742685315 8448 5cf247d4bd0c7d5d711bbbdf111fae2e ""
-  "/usr/share/texmf-dist/tex/latex/biblatex-nature/nature.bbx" 1742685315 16912 080cdf4c5adf01f53b27b3137d2587e3 ""
-  "/usr/share/texmf-dist/tex/latex/biblatex-nature/nature.cbx" 1742685315 1420 69f291f7e52c78a6947626225382d286 ""
-  "/usr/share/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx" 1742685315 92 7cdbb04a1e32fba0fbb91b6e6d123497 ""
-  "/usr/share/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx" 1742685315 1818 9ed166ac0a9204a8ebe450ca09db5dde ""
+  "/usr/share/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx" 1742685315 8024 f170876981d3e1db9ed0abd5abc62dbe ""
   "/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx" 1742685315 25680 409c3f3d570418bc545e8065bebd0688 ""
   "/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg" 1742685315 69 249fa6df04d948e51b6d5c67bea30c42 ""
   "/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def" 1742685315 96838 228f189cb4020ea9f6d467af8aa859c2 ""
@@ -79,7 +76,7 @@
   "/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty" 1742685315 9961 107fdb78f652fccae7bce0d23bdc19cd ""
   "/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def" 1742685315 13919 5426dbe90e723f089052b4e908b56ef9 ""
   "/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def" 1742685315 32761 18d14e3b502c120f79b2184de4e21d14 ""
-  "/usr/share/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx" 1742685315 10425 7de071597dabda19c14ff0780122d6d4 ""
+  "/usr/share/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx" 1742685315 3976 2d46354b304f9bc8fda915fe9215de04 ""
   "/usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx" 1742685315 40021 daa5a82ed0967f3ac4b77cb8384cac55 ""
   "/usr/share/texmf-dist/tex/latex/caption/caption.sty" 1742685315 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/usr/share/texmf-dist/tex/latex/caption/caption3.sty" 1742685315 72619 ee90b6612147680fd73c3b1406a74245 ""
@@ -111,10 +108,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1742913818 5311372 e33d7bbf4791b970e045e3c01bb98e17 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1742913810 2008244 a5f55fa34705aa1f62b52e4c9396fd3f ""
-  "main.tex" 1747161876.98286 5503 94df2fe0078639cb1cfc5b45eda6b39c ""
-  "output/aux/main.aux" 1747161879.41735 2454 dbec6c334fa95c820715289d23fa539d "pdflatex"
-  "output/aux/main.bbl" 1747161878.48484 27852 599f834501de436bd6f29a4b8d692e13 "biber output/aux/main"
-  "output/aux/main.run.xml" 1747161879.41992 2402 ca90f6e092a202b0c2284c682a6f72f3 "pdflatex"
+  "main.tex" 1747271028.78451 3666 0aeb0144201eb680ea8ef02dd2f93227 ""
+  "output/aux/main.aux" 1747271029.4258 4957 c850bd7dbb7e59c03457e7a3c212f811 "pdflatex"
+  "output/aux/main.bbl" 1747270429.97266 60181 0682a546411e422dc5c9d2b354856c35 "biber output/aux/main"
+  "output/aux/main.run.xml" 1747271029.42877 2307 649d6514eb63958ad64047ebf4683990 "pdflatex"
   (generated)
   "output/aux/main.aux"
   "output/aux/main.bcf"

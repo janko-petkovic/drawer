@@ -71,7 +71,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldateparts</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
@@ -96,15 +96,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>5</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>5</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -180,11 +180,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>true</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>full</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -204,7 +204,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useprefix</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useafterword</bcf:key>
@@ -314,7 +314,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldateparts</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
@@ -331,15 +331,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>5</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>5</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -395,11 +395,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>true</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>full</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -419,7 +419,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useprefix</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useafterword</bcf:key>
@@ -642,10 +642,8 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">subentry</bcf:option>
-    <bcf:option datatype="boolean">articletitle</bcf:option>
-    <bcf:option datatype="boolean">intitle</bcf:option>
-    <bcf:option datatype="boolean">subentrycomp</bcf:option>
+    <bcf:option datatype="boolean">dashed</bcf:option>
+    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -727,8 +725,7 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">subentry</bcf:option>
-    <bcf:option datatype="boolean">subentrycomp</bcf:option>
+    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
@@ -817,8 +814,7 @@
     <bcf:option datatype="boolean" backendout="1">doi</bcf:option>
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">subentry</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">subentrycomp</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">mergedate</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -2377,19 +2373,29 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">Horne1995TheRO</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">Gilman1985TheCA</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Bostan2010TheBG</bcf:citekey>
-    <bcf:citekey order="2" intorder="2">Washburn2024TheCD</bcf:citekey>
-    <bcf:citekey order="2" intorder="3">Wagner2017CerebellarGC</bcf:citekey>
-    <bcf:citekey order="2" intorder="4">Ohmae2015ClimbingFE</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Strick2009CerebellumAN</bcf:citekey>
-    <bcf:citekey order="3" intorder="2">Overwalle2014SocialCA</bcf:citekey>
-    <bcf:citekey order="3" intorder="3">Schmahmann2006CognitionEA</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">DeSchepper2021ModelSU</bcf:citekey>
-    <bcf:citekey order="4" intorder="2">DAngelo2016ModelingTC</bcf:citekey>
-    <bcf:citekey order="4" intorder="3">Diedrichsen2019UniversalTO</bcf:citekey>
-    <bcf:citekey order="4" intorder="4">Houghton2021EditorialIP</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">Washburn2024TheCD</bcf:citekey>
+    <bcf:citekey order="1" intorder="2">Ohmae2015ClimbingFE</bcf:citekey>
+    <bcf:citekey order="1" intorder="3">Bostan2010TheBG</bcf:citekey>
+    <bcf:citekey order="1" intorder="4">Washburn2024TheCD</bcf:citekey>
+    <bcf:citekey order="1" intorder="5">Wagner2017CerebellarGC</bcf:citekey>
+    <bcf:citekey order="1" intorder="6">Ohmae2015ClimbingFE</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Strick2009CerebellumAN</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">Overwalle2014SocialCA</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">DeSchepper2021ModelSU</bcf:citekey>
+    <bcf:citekey order="3" intorder="2">DAngelo2016ModelingTC</bcf:citekey>
+    <bcf:citekey order="3" intorder="3">Diedrichsen2019UniversalTO</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Calaim2022TheGO</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">Gonalves2019TrainingDN</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Lueckmann2017FlexibleSI</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">TejeroCantero2020sbiAT</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">Deistler2024DifferentiableSE</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Pellegrino2024DimensionalityRB</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">Cenedese2022DatadrivenMA</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Jedlicka2022ParetoOE</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Bishop2012PatternRA</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">Luo2022UnderstandingDM</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Kumar2022PhysiologicalRO</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">10.1242/dmm.049514</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
