@@ -136,54 +136,6 @@
       \verb https://api.semanticscholar.org/CorpusID:16613552
       \endverb
     \endentry
-    \entry{Bostan2010TheBG}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=33ad24152e49ba82896e7fa4fd951f46}{%
-           family={Bostan},
-           familyi={B\bibinitperiod},
-           given={Andreea\bibnamedelima C.},
-           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=85a4a5247401f986a3572cb0f929c3ee}{%
-           family={Dum},
-           familyi={D\bibinitperiod},
-           given={Richard\bibnamedelima P.},
-           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d74b453a229fc7bcac80faa4d0ebbd72}{%
-           family={Strick},
-           familyi={S\bibinitperiod},
-           given={Peter\bibnamedelima L.},
-           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{1540405660a0cf2ddfa31a4b0e39a0be}
-      \strng{fullhash}{1540405660a0cf2ddfa31a4b0e39a0be}
-      \strng{fullhashraw}{1540405660a0cf2ddfa31a4b0e39a0be}
-      \strng{bibnamehash}{1540405660a0cf2ddfa31a4b0e39a0be}
-      \strng{authorbibnamehash}{1540405660a0cf2ddfa31a4b0e39a0be}
-      \strng{authornamehash}{1540405660a0cf2ddfa31a4b0e39a0be}
-      \strng{authorfullhash}{1540405660a0cf2ddfa31a4b0e39a0be}
-      \strng{authorfullhashraw}{1540405660a0cf2ddfa31a4b0e39a0be}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of the National Academy of Sciences}
-      \field{title}{The basal ganglia communicate with the cerebellum}
-      \field{volume}{107}
-      \field{year}{2010}
-      \field{pages}{8452\bibrangedash 8456}
-      \range{pages}{5}
-      \verb{urlraw}
-      \verb https://api.semanticscholar.org/CorpusID:19696797
-      \endverb
-      \verb{url}
-      \verb https://api.semanticscholar.org/CorpusID:19696797
-      \endverb
-    \endentry
     \entry{Wagner2017CerebellarGC}{article}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=f4ee2430d24c9287fac0f0ffe0a8989d}{%
@@ -1433,6 +1385,48 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1242/dmm.049514
+      \endverb
+    \endentry
+    \entry{Ribar2020NeuromorphicCD}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=61ca795ead8c4b8fa15729ce7812ffb0}{%
+           family={Ribar},
+           familyi={R\bibinitperiod},
+           given={Luka},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0dfd29560d972684e45872242d7ebfb8}{%
+           family={Sepulchre},
+           familyi={S\bibinitperiod},
+           given={Rodolphe},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d2e94d03b85fd75c79d262bcfd3a3696}
+      \strng{fullhash}{d2e94d03b85fd75c79d262bcfd3a3696}
+      \strng{fullhashraw}{d2e94d03b85fd75c79d262bcfd3a3696}
+      \strng{bibnamehash}{d2e94d03b85fd75c79d262bcfd3a3696}
+      \strng{authorbibnamehash}{d2e94d03b85fd75c79d262bcfd3a3696}
+      \strng{authornamehash}{d2e94d03b85fd75c79d262bcfd3a3696}
+      \strng{authorfullhash}{d2e94d03b85fd75c79d262bcfd3a3696}
+      \strng{authorfullhashraw}{d2e94d03b85fd75c79d262bcfd3a3696}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Control Systems}
+      \field{title}{Neuromorphic Control: Designing Multiscale Mixed-Feedback Systems}
+      \field{volume}{41}
+      \field{year}{2020}
+      \field{pages}{34\bibrangedash 63}
+      \range{pages}{30}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:226281979
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:226281979
       \endverb
     \endentry
   \enddatalist

@@ -2375,10 +2375,8 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">Washburn2024TheCD</bcf:citekey>
     <bcf:citekey order="1" intorder="2">Ohmae2015ClimbingFE</bcf:citekey>
-    <bcf:citekey order="1" intorder="3">Bostan2010TheBG</bcf:citekey>
-    <bcf:citekey order="1" intorder="4">Washburn2024TheCD</bcf:citekey>
-    <bcf:citekey order="1" intorder="5">Wagner2017CerebellarGC</bcf:citekey>
-    <bcf:citekey order="1" intorder="6">Ohmae2015ClimbingFE</bcf:citekey>
+    <bcf:citekey order="1" intorder="3">Washburn2024TheCD</bcf:citekey>
+    <bcf:citekey order="1" intorder="4">Wagner2017CerebellarGC</bcf:citekey>
     <bcf:citekey order="2" intorder="1">Strick2009CerebellumAN</bcf:citekey>
     <bcf:citekey order="2" intorder="2">Overwalle2014SocialCA</bcf:citekey>
     <bcf:citekey order="3" intorder="1">DeSchepper2021ModelSU</bcf:citekey>
@@ -2396,6 +2394,7 @@
     <bcf:citekey order="9" intorder="2">Luo2022UnderstandingDM</bcf:citekey>
     <bcf:citekey order="10" intorder="1">Kumar2022PhysiologicalRO</bcf:citekey>
     <bcf:citekey order="10" intorder="2">10.1242/dmm.049514</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Ribar2020NeuromorphicCD</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
