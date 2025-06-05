@@ -1,0 +1,21 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'output/aux/main.blg'
+[28] biber:340> INFO - === Thu May 15, 2025, 16:00:14
+[35] Biber.pm:420> INFO - Reading 'output/aux/main.bcf'
+[63] Biber.pm:994> INFO - Found 21 citekeys in bib section 0
+[69] Biber.pm:4463> INFO - Processing section 0
+[74] Biber.pm:4654> INFO - Looking for bibtex file 'biblio.bib' for section 0
+[74] bibtex.pm:1713> INFO - LaTeX decoding ...
+[83] bibtex.pm:1519> INFO - Found BibTeX data source 'biblio.bib'
+[205] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[206] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[206] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[206] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[214] bbl.pm:676> INFO - Writing 'output/aux/main.bbl' with encoding 'UTF-8'
+[222] bbl.pm:779> INFO - Output to output/aux/main.bbl
+[222] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_64d0/a9e03cb3043b9e2c02591da84105bb68_81459.utf8, line 2, warning: 35 characters of junk seen at toplevel
+[222] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_64d0/a9e03cb3043b9e2c02591da84105bb68_81459.utf8, line 34, warning: 28 characters of junk seen at toplevel
+[222] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_64d0/a9e03cb3043b9e2c02591da84105bb68_81459.utf8, line 73, warning: 23 characters of junk seen at toplevel
+[222] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_64d0/a9e03cb3043b9e2c02591da84105bb68_81459.utf8, line 97, warning: 24 characters of junk seen at toplevel
+[222] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_64d0/a9e03cb3043b9e2c02591da84105bb68_81459.utf8, line 107, warning: 13 characters of junk seen at toplevel
+[222] Biber.pm:133> INFO - WARNINGS: 5

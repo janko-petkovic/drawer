@@ -1,0 +1,1 @@
+/sbin/c++ -Wl,--dependency-file=CMakeFiles/Tutorial.dir/link.d CMakeFiles/Tutorial.dir/tutorial.cxx.o -o Tutorial  -Wl,-rpath,/home/janko/code/drawer/python-c/cmake/Step2/build/MathFunctions MathFunctions/libMathFunctions.so
