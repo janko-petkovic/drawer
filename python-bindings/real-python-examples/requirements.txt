@@ -1,5 +1,0 @@
-cffi
-Cython
-invoke
-pybind11
-pycparser
