@@ -1,0 +1,3 @@
+/home/janko/code/drawer/python-c/cmake/Step1/build/CMakeFiles/tutorial.dir
+/home/janko/code/drawer/python-c/cmake/Step1/build/CMakeFiles/edit_cache.dir
+/home/janko/code/drawer/python-c/cmake/Step1/build/CMakeFiles/rebuild_cache.dir

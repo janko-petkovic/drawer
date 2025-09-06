@@ -1,0 +1,155 @@
+\documentclass[a4paper, 10pt]{article}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Margins
+\usepackage[left=3cm, right=3cm]{geometry}
+
+% Mathematics
+\usepackage{amsmath, amssymb, mathtools, amsthm}
+\usepackage{cancel}
+
+% Bibliography (uncomment if needed)
+%\usepackage{csquotes}
+%\usepackage[backend=biber, sorting=none, style=nature]{biblatex}
+%\addbibresource{biblio.bib}
+
+% Personal taste
+\usepackage[font=footnotesize]{caption}
+\usepackage[parfill]{parskip}
+
+
+\title{vertices}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\subsection{Merger}
+
+Consider a weighted complete graph $G(V, E)$ with a set of vertices $V$ and a
+set of edges $E$ formed by pairs of elements in $V$. The set $V$ has cardinality
+$|V| = N$ and the set $E$ has cardinality $|E| = N(N-1)/2$. The latter number
+will appear often, so we will denote it compactly as $T_{N-1}$, the $N-1$th
+triangular number. We will denote by $w_{ij} = w(v_i, v_j)$ the weight of the
+edge connecting the vertices $i$ and $j$.
+
+Choosing a subset $A \subset V$ of cardinality $k$ induces a partition in the edges:
+
+\begin{equation}
+    E = E_A \cup E_{AA^c} \cup E_{A^c}
+\end{equation}
+
+Where $E_A$ are the edges formed by the complete subgraph $G(A, E_A)$. The 
+elements of this set are called the intra-edges of $A$. The set $E_{AA^c}$
+represents the edges with one vertex in $A$ and another in its complement $A^c$,
+and its elements are called the inter-edges of $A$:
+
+\begin{align}
+    E_A &:= \{\{v_i, v_j\} \in E | v_i \in A \land v_j \in A\} \\
+    E_{AA^c} &:= \{\{v_i, v_j\} \in E | (v_i \in A \land v_j \in A^c) \lor (a \in A^c \land b \in A)\}
+    \label{eq:intra-inter-edge-def} 
+\end{align}
+.
+
+Since $G(A, E_A)$ is complete, the cardinality of $E_A$ is $T_{k-1}$ whereas the cardinality of $E_{AA^c}$ is $(N-k)k$, since
+
+\begin{align}
+    |E| &= |E_A \cup E_{AA^c} \cup E_{A^c}| = |E_A| + |E_{AA^c}| + |E_{A^c}|\\
+    T_{N-1} &= T_{k-1} + |E_{AA^c}| + T_{N-k-1} \\
+    |E_{AA^c}| &= (N-k)k
+\end{align}
+.
+
+With this construction, our goal is to compute the expected value of the average of weights of $E_A$ provided we choose the vertices of $A$ with uniform probability, that is
+
+\begin{equation}
+    \mathbb{E}\left[\frac{1}{|E_A|}\sum_{e \in E_A} w(e) \Big\vert |A| = k\right]
+    \label{eq:expected-average-def}
+\end{equation}
+.
+
+From this point, it will be convenient to enumerate the set of vertices with a natural ordering $V = \left\{v\right\}_{i=1}^N$, so we can rewrite equation \ref{eq:expected-average-def} as
+
+\begin{equation}
+    \frac{1}{T_{k-1}}\mathbb{E}\left[\sum_{\substack{i>j \\ v_i,v_j \in A}}w((v_i,v_j)) \Big\vert |A| = k\right]
+    \label{eq:expected-average-vertex}
+\end{equation}
+.
+
+Since the choice of vertices completely define the outcome, we define the set of events $\mathcal{U}$ to be a sigma algebra over the vertices as the power set of $V$:
+
+\begin{equation}
+    \mathcal{U} = 2^{V}
+    \label{eq:power-set-is-sigma-algebra}   
+\end{equation}
+.
+
+We are particularly interested in the subset $\mathcal{U}_k \coloneq \{A \in \mathcal{U} | |A|=k\}$ with probability
+
+\begin{equation}
+    p_k \coloneq \mathbb{P}(A|\mathcal{U}_k) = \frac{1}{\binom{N}{k}}
+    \label{eq:conditional-probability-fixed-k}
+\end{equation}
+.
+
+Now, we can expand equation \ref{eq:expected-average-vertex} as
+
+\begin{equation}
+    \frac{1}{T_{k-1}}\mathbb{E}\left[\sum_{\substack{i>j \\ v_i,v_j \in A}}w((v_i,v_j)) \Big\vert |A| = k\right] = \frac{1}{T_{k-1}}\sum_{A \in \mathcal{U}_k} p_k \sum_{\substack{i>j \\ v_i,v_j \in A}}w((v_i,v_j))
+    \label{eq:expectation-as-sum}
+\end{equation}
+.
+
+The rightmost sum can be simplified with the use of indicator functions:
+
+\begin{equation}
+    \chi_{A}(v) = \begin{cases}
+        1, & v \in A \\
+        0
+    \end{cases}
+    \label{eq:indicator-function}
+\end{equation}
+
+Which allows to rewrite the sum as
+
+\begin{equation}
+    \sum_{\substack{i>j \\ v_i,v_j \in A}}w((v_i,v_j)) = \sum_{\substack{i>j \\ v_i,v_j \in V}}\chi_A(v_i)\chi_A(v_j)w((v_i,v_j))
+\end{equation}
+
+Resulting in equation \ref{eq:expectation-as-sum} to become
+
+\begin{equation}
+    \frac{1}{T_{k-1}}\sum_{A \in \mathcal{U}_k} p_k \sum_{\substack{i>j \\ v_i,v_j \in A}}w((v_i,v_j)) = \frac{p_k}{T_{k-1}}\sum_{\substack{i>j \\ v_i,v_j \in V}}w((v_i,v_j))\sum_{A \in \mathcal{U}_k}\chi_A(v_i)\chi_A(v_j)
+    \label{eq:expectation-smaller}
+\end{equation}
+.
+
+The rightmost sum is a count over how many times the edge $\{v_i,v_j\}$ appears in different sets of $\mathcal{U}_k$, more specifically, we look for the cardinality of the set $\mathcal{U}_k(v_i,v_j)$ defined as
+
+\begin{equation}
+    \mathcal{U}_k(v_i, v_j) \coloneq \{A \in \mathcal{U}_k | A \cap \{v_i, v_j\} \neq \emptyset\}
+\end{equation}
+
+Which is isomorphic to
+
+\begin{equation}
+    \mathcal{U}'_k(v_i, v_j) \coloneq \{A - \{v_i, v_j\} | A \in \mathcal{U}_k\} - \{\emptyset\}
+\end{equation}
+
+With cardinality $\binom{N-2}{k-2}$. Replacing this value with the sum in equation \ref{eq:expectation-smaller} yields
+
+\begin{align}
+    \mathbb{E}\left[\frac{1}{T_{k-1}}\sum_{e \in E_A} w(e) \Big\vert |A| = k\right] = \dots &= \frac{p_k}{T_{k-1}}\sum_{\substack{i>j \\ v_i,v_j \in V}}w((v_i,v_j))\binom{N-2}{k-2} \\
+    &= \frac{\cancel{p_k}}{T_{k-1}}\sum_{\substack{i>j \\ v_i,v_j \in V}}w((v_i,v_j))\cancel{\binom{N}{k}}\frac{T_{k-1}}{T_{N-1}} \\
+    &= \frac{1}{T_{N-1}}\sum_{\substack{i>j \\ v_i,v_j \in V}}w((v_i,v_j))
+\end{align}
+
+.
+  % \printbibliography
+
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[a4paper, 10pt]{article}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Margins
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+
+% Mathematics
+\usepackage{amsmath, amssymb, mathtools, amsthm}
+
+% Bibliography (uncomment if needed)
+\usepackage{csquotes}
+\usepackage[backend=biber, sorting=none, style=authoryear]{biblatex}
+\addbibresource{biblio.bib}
+
+% Personal taste
+\usepackage[font=footnotesize]{caption}
+\usepackage[parfill]{parskip}
+
+
+\title{Inferring cerebellar computations with probabilistic machine learning
+approaches}
+\author{}
+
+\begin{document}
+
+\maketitle
+% Locomotion is one of the strategies that biological systems use to interact with
+% the surrounding environment. In some organisms a specific unit, the cerebellum,
+% has evolved to achieve a high degree of motor coordination during the execution
+% of motor programs. How this function is implemented in the cerebellar circuitry
+% and what are the theoretical principles driving its emergence are still active
+% fields of research.
+
+Growing evidence is suggesting that vertebrate adaptability relies on the
+cerebellum's capacity to channel information well beyond its traditionally known
+motor pathways. In particular, researchers in the field have discovered novel
+projections to sub-cortical and reward related regions (\cite{Washburn2024TheCD,
+Ohmae2015ClimbingFE, Washburn2024TheCD, Wagner2017CerebellarGC}), observing that
+the cerebellum is involved in a plethora of tasks not directly related to
+movement tuning (\cite{Strick2009CerebellumAN, Overwalle2014SocialCA}). Despite
+this improvement in phenomenological understanding, the grounding theoretical
+principles driving cerebellar computations are still strongly debated.
+
+To address this question, several computational models have been proposed,
+dissecting specific functional aspects and leveraging different mathematical
+frameworks (\cite{DeSchepper2021ModelSU, DAngelo2016ModelingTC,
+Diedrichsen2019UniversalTO}). We plan to build on top of this work and propose a
+unified theoretical framework of cerebellar computation by integrating model
+selection and inference theory with experimental validation and neuromorphic
+applications.
+
+We will start by studying the equivalence of the proposed models with respect to
+their emerging behaviour, framing the question as a model degeneracy (or
+robustness) problem (\cite{Calaim2022TheGO, Gonalves2019TrainingDN}). To tackle
+this problem, we will start by characterizing the models' parameter space using
+simulation-based inference (\cite{Lueckmann2017FlexibleSI}), leveraging the
+latest toolkit developments achieved in our group (\cite{TejeroCantero2020sbiAT,
+Deistler2024DifferentiableSE}). Coupling this approach with summary statistic
+design and dimensionality reduction techniques
+(\cite{Pellegrino2024DimensionalityRB, Cenedese2022DatadrivenMA}) we will
+characterize these parameter spaces in terms of their computational features,
+low-dimensional dynamics, and other optimality metrics such as energy efficiency
+(\cite{Jedlicka2022ParetoOE}). With the aid of variational inference techniques
+(\cite{Bishop2012PatternRA, Luo2022UnderstandingDM}), we will search for common
+latent factors that underpin these emerging features across different models,
+ultimately separating a healthy neuronal circuit from a pathological one.
+
+Building on these insights, we will develop a new computational model, and test
+the predictions of our theoretical framework on existing human and animal
+cerebellar datasets (\cite{Kumar2022PhysiologicalRO, 10.1242/dmm.049514}).
+Moreover, in strict collaboration with experts in the field
+(\cite{Ribar2020NeuromorphicCD}), we will investigate how the newly discovered
+factors can be applied to neuromorphic networks to achieve a superior degree of
+robustness in motor control tasks.
+
+In summary, by bridging advanced parameter inference, model selection and
+experimental data analysis, this project will unveil the foundational principles
+underlying cerebellar computations. This will ultimately pave the way to novel
+diagnostic approaches and resilient, brain-inspired computational motor
+controllers.
+
+
+
+
+\printbibliography
+
+\end{document}

@@ -1,0 +1,168 @@
+\documentclass[a4paper, 10pt]{article}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Margins
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+
+% Mathematics
+\usepackage{amsmath, amssymb, mathtools, amsthm}
+% \usepackage{theorem}
+\newtheorem{definition}{Def}
+
+\newcommand{\avg}[1]{\langle#1\rangle}
+\newcommand{\var}[1]{\text{Var}\left(#1\right)}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\sigmaxi}{\sigma_{\xi}}
+\newcommand{\sigmaeta}{\sigma_{\eta}}
+
+% Bibliography (uncomment if needed)
+%\usepackage{csquotes}
+%\usepackage[backend=biber, sorting=none, style=nature]{biblatex}
+%\addbibresource{biblio.bib}
+
+% Personal taste
+\usepackage[font=footnotesize]{caption}
+\usepackage[parfill]{parskip}
+
+
+\title{Covariance in processes with noisy readout}
+\author{}
+
+\begin{document}
+
+  \maketitle
+  
+  We start by recalling the three main observations concerning our spine data:
+  \begin{enumerate}
+    \item spine signals are log-normally distributed
+    \item subsequent changes in signal are anticorrelated
+    \item this anticorrelation decays in time without crossing zero
+  \end{enumerate}
+
+  We now want to investigate some theoretical setups and understand, in
+  particular their covariance structure. Let's start with some definitions.\\
+  Let $X_t$ be a discrete stationary stochastic process, so that $ X_{t+1} =
+  f(X_t, t),\; t\in\mathbb{N} $. Then
+  \begin{itemize}
+    \item [-] the expected value of $X_t$ is $\avg{X}$
+    \item [-] the \textbf{variance} of $X_t$ is $\var{X}$
+    \item [-] the \textbf{autocorrleation} of $X_t$ is $G_X(j) = \sum_{t} X_t \, X_{t-j}$
+    % \item [-] the \textbf{(auto)covariance} of $X_t$ is $G_X(j) = \sum_{t} (X_t -
+    %   \avg{X})(X_{t-j} - \avg{X})$
+  \end{itemize}
+
+  These are just operative definitions so that later on we don't get confused
+  with the nomenclature.
+
+  \section{Problem statement}
+  Consider a discrete stationary stochastic process $X$ with an associated
+  (additive) noisy readout $R$:
+  \begin{equation}
+    \begin{cases}
+      &\Delta X_{t} = f(X_t, t)\\
+      &R_{t} = X_t + N_t = X_{t} + n(X_{t}, t)
+    \end{cases}
+  \end{equation}
+  where we define $\Delta X_t = \Delta X_t(1) = X_{t+1} - X_t$, with the generic
+  variation being $\Delta X_t(d) = X_{t+1} - X_{t-d+1}$.
+
+  We are interested in understanding how the covariance structure of $R$ and
+  $\Delta R(d)$ depends on the underlying stochastic process $X$, the noise
+  $n(X,t)$ and their possible correlation.
+
+  \subsection{Some general properties}
+  We can directly compute
+  \begin{equation}
+    G_R(j) = G_X(j) + G_N(j) + 2 G_{X,N}(j)
+  \end{equation}
+  and see that if noise and signals are not correlated, the covariance of the
+  readout reduces to $G_R(j) = G_X(j) + G_N(j)$. Covariance should be linear
+  under independence of arguments. With this property:
+  \begin{align}
+    G_{\Delta R(d)}(j) &= 2 G_R(j) - G_{R}(d+j) - G_{R}(d-j)\\
+  \end{align}
+  where we can then substitute $G_R(j)$.
+
+  \subsection{Model 1: OU with uncorrelated normal noise}
+  The system in question reads
+
+  \begin{equation}
+    \begin{cases}
+      &\Delta X_{t} = \theta (\mu - X) + \xi_t\\
+      &R_{t} = X_t + \eta_t
+    \end{cases}
+  \end{equation}
+
+  where $\eta_t \sim \N(0,\sigmaeta^2)$ and $\xi_t \sim \N(0,\sigmaxi^2)$ are
+  two sets of IID normal random variables.
+  A handy equation for $X_t$ is
+  \begin{equation}
+    X_{t+1} = \mu \theta + (1-\theta) X_t + \xi_t
+  \end{equation}
+  To compute the average and the variance of the OU process, we proceed in the
+  usual way, taking the average of $X_t$ or $X_{t+1}$ and then imposing
+  stationarity ($X_{t+1} = X_t$)
+  
+  \begin{equation}
+    \avg{X} = \mu, \qquad
+    \avg{X^2} = \mu^2 + \frac{\sigmaxi^2}{\theta(2-\theta)}
+  \end{equation}
+
+  Observe that the variance is not finite for $\theta = 0$ (random walk) and
+  $\theta = 2$ (convergence radius?); also, it is minimal for $\theta = 1$
+  (each $X_t$ is an independent sample from a normal distribution).\\
+  To compute the autocorrelation, we observe that
+  \begin{equation}
+    X_{t+1} = \theta \mu \sum_{k=0}^{n} (1-\theta)^k +
+    (1-\theta)^{n+1} X_{t-n} + \sum_{k=0}^{n} (1-\theta)^k \xi_{t-k}
+  \end{equation}
+  
+  Recalling that
+  \begin{equation}
+    \sum_{k=0}^{n} x^k = \sum_{k=0}^{\infty} x^k  - \sum_{k=0}^{\infty}
+    x^{k+n+1} = \frac{1 - x^{n+1}}{1 - x}
+  \end{equation}
+
+  under the condition that $|1-\theta| < 1$, remembering that the sum of IID
+  normal r.v. has variance equal the sum of the variances, we get that
+  \begin{align}
+    X_{t+1} 
+      &= \left[1 - (1-\theta)^{j+1}\right] \mu  + (1-\theta)^{j+1}
+      X_{t-j} + \sqrt{\frac{1-(1-\theta)^{2(j+1)}}{1-(1-\theta)^2}} \xi_{t-j} \\
+      &= a(j) + b(j) \, X_{t-j} + c(j) \, \xi_{t-j}
+  \end{align}
+
+  Now we can compute the quantity
+  \begin{align}
+    &G_X(j) = \avg{X_{t+1} X_{t-j+1}} = \\
+    &= \avg{[\mu \theta + (1-\theta) X_t + \xi_t][\mu \theta + (1-\theta) X_{t-j} +
+    \xi_{t-j}]} \\
+    %
+    &= [a(j) + b(j)X_{t-j} + c(j)\xi_{t-j}][\mu \theta + (1-\theta) X_{t-j} +
+    \xi_{t-j}]\\
+    %
+    &= a(j) \mu \theta + \avg{X} \left[a(j)(1-\theta) + b(j) \mu \theta\right] +
+    b(j)(1-\theta) \avg{X^2} + c(j) \sigmaxi^2\\[10pt]
+    %
+    &= [1+(1-\theta)^{j+1}] \mu^2 \theta + \mu^2 
+    \left\{[1+(1-\theta)^{j+1}](1-\theta) + \theta (1-\theta)^{j+1}
+    \right\}  +\\
+    &= \mu^2 \left[1+(1-\theta)^{j+1} + \theta (1-\theta)^{j+1} +
+    (1-\theta)^{j+2} \right] +
+    \sigmaxi^2\left[\frac{(1-\theta)^{j+2}}{\theta(2-\theta)} + \sqrt{\frac{1 +
+    (1-\theta)^{2(j+1)}}{1+(1-\theta)^2}}\right]\\
+    %
+    &= \mu^2 \left[ 1 + 2(1-\theta)^{j+1}\right] +
+    \sigmaxi^2\left[\frac{(1-\theta)^{j+2}}{\theta(2-\theta)} + \sqrt{\frac{1 +
+    (1-\theta)^{2(j+1)}}{1+(1-\theta)^2}}\right]
+  \end{align}
+
+
+  % \printbibliography
+
+
+\end{document}

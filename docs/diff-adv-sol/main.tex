@@ -1,0 +1,251 @@
+\documentclass[a4paper, 10pt]{article}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% Margins
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+
+% Mathematics
+\usepackage{amsmath, amssymb, mathtools, amsthm}
+
+% Bibliography (uncomment if needed)
+\usepackage{csquotes}
+\usepackage[backend=biber, sorting=none, style=nature]{biblatex}
+\addbibresource{biblio.bib}
+
+% Personal taste
+\usepackage[font=footnotesize]{caption}
+\usepackage[parfill]{parskip}
+
+
+\title{Some derivation of the axon problem}
+\author{}
+
+\begin{document}
+
+  \maketitle
+
+  This is about Nestor's diffusion advection problem. We have a finite axon of
+  length $L$, with some influx $j_0$ at the soma ($x=0$). We also know that the
+  dendrite is closed, so no net flux will be possible at $x=L$.\\
+  Our chemical species $u : (x,t) \mapsto u(x,t)$ undergoes diffusion,
+  advection, and decay. If I am not mistaken, the problem can be formulated as
+  the initial boundary problem:
+
+  \begin{equation}\label{eq:problem}
+    \left\{ \begin{aligned}
+      &u_t = D \, u_{xx} - v \, u_x - k \, u\\
+      &\left[D \, u_x - v \, u\right]_{(0,t)} = j_0\\
+      &\left[D \, u_x - v \, u\right]_{(L,t)} = 0\\
+      &u(x,0) = \varphi(x)
+    \end{aligned}\right.
+  \end{equation}
+  
+  on the domain $x \in D = [0, L]$ and $t \in [0, +\infty]$.
+  This is very classic stuff and I sure hope there exists a solution of
+  some sort. Let us start first with the steady-state solution
+
+  \paragraph{Steady-state} In order to find the steady-state solution
+  $s(x) = u(x, t\to \infty)$, we impose $u_t = 0$. That leaves us with the
+  Sturm-Liouville problem
+
+  \begin{equation}
+    \left\{\begin{aligned}
+      &D s'' - v s' - k s = 0\\
+      & D s'(0) - v s(0) = j0 \\
+      & D s'(L) - v s(L) = 0 \\
+    \end{aligned}\right.
+  \end{equation}
+
+  which admits the general solution
+  
+  \begin{equation}
+    s(x) = a \, e^{\lambda_1 x} + b \, e^{\lambda_2 x}, \quad a, b \in \mathbb{R}
+  \end{equation}
+
+  Since $D, v, k > 0$ (things diffuse, move rightwards and degrade in time),
+  also the eigenvalues $\lambda_1$ and $\lambda_2$ will be real.
+  We can now proceed and find the exact values of $a$ and $b$ by direct
+  substitution in the boundary conditions. Before going ahead, we rewrite the
+  expressions for $s(x)$ and $s'(x)$ in the more convenient form
+
+  \begin{align}
+    &s(x) = e^{\frac{v}{2D}x}\left[a \, e^{\frac{\Delta}{2D}x} + b \,
+      e^{-\frac{\Delta}{2D}x}\right]\\[6pt]
+    &s'(x) = \frac{v}{2D}s(x) + \frac{\Delta}{2D} e^{\frac{v}{2D}x}\left[a \,
+      e^{\frac{\Delta}{2D}x} - b \, e^{-\frac{\Delta}{2D}x}\right]
+  \end{align}
+
+  where $\Delta = \sqrt{v^2 + 4 D k}$. By inserting these expressions in the
+  boundary conditions, we obtain
+
+  \begin{equation*}
+    \left\{\begin{aligned}
+    &b = \frac{\Delta - v}{\Delta + v} \, a - \frac{2j_0}{\Delta - v}\\[6pt]
+    &b = \exp\left\{\frac{\Delta}{D}L\right\} \, \frac{\Delta - v}{\Delta + v}
+    \,a
+    \end{aligned}\right.
+  \end{equation*}
+
+  This yields the constant values
+
+  \begin{equation}
+    a = \frac{2j_0}{(\Delta - v)(1-e^{\frac{\Delta}{D}L})},
+    \qquad
+    b = \frac{2j_0 \, e^{\frac{\Delta}{D}L}}
+    {(\Delta + v)(1-e^{\frac{\Delta}{D}L})}
+  \end{equation}
+  
+  and the final expression for $s(x)$ as
+  \begin{equation}
+    s(x) = \frac{2j_0}{1-e^{\frac{\Delta}{D}L}} \, e^{\frac{v}{2D}x}
+    \left[\frac{e^{\frac{\Delta}{2D}x}}{\Delta - v} +
+    \frac{e^{-\frac{\Delta}{2D}(x-2L)}}{\Delta + v}\right]
+  \end{equation}
+
+  Interestingly, the flux $j_0$ acts as a scaling parameter.
+
+  \paragraph{Full solution} I don't really know how to do this for now but soon.
+  Below are some failed attempts. We start with the substitution
+
+  \begin{equation}\label{eq:change}
+    u(x,t) = w(x,t) \, e^{\eta t - \mu x}  
+  \end{equation}
+
+  where
+
+  \begin{equation}
+    \eta = k + \frac{v^2}{4D}, \qquad \mu = \frac{v}{2D}
+  \end{equation}
+  
+  by direct substitution we get 
+
+  \begin{equation}\label{eq:diffusion:w}
+    \left\{ \begin{aligned}
+      &w_t = D \, w_{xx}\\
+      &D \, w_x(0, t)  - (D \mu + v) w(0,t)  = j_0 \, e^{-\eta t}\\
+      &D \, w_x(L, t)  - (D \mu + v) w(L,t)  = 0\\
+      &w(x,0) = \varphi(x) \, e^{\mu x - \eta t} 
+    \end{aligned}\right.
+  \end{equation}
+  
+  We have, therefore, a initial boundary problem for the diffusion of $w(x,t)$,
+  with Robin boundary conditions that depend on time. To try and tackle this
+  problem, we will follow the recipe in \cite{Drbek2007ElementsOP} and
+  integrating it with \cite{Salsa2022PartialDE}.\\ 
+  We start by separating our solution $w(x,t)$ in two parts, one denominated
+  $S(x,t)$, representing the steady-state of \eqref{eq:diffusion:w}, and the
+  other $U(x,t)$ representing the transient perturbation of $w(x,t)$ from its
+  asymptotic steady state
+
+  \begin{equation}
+    w(x,t) = S(x,t) + U(x,t)
+  \end{equation}
+  
+  By construction, $S(x,t)$ has to respect the boundary value problem
+  \eqref{eq:diffusion:w} for $t \to \infty$. Following, without any pretentions
+  of originality, the method illustrated in \cite{Drbek2007ElementsOP}, we posit
+  for $S(x,t)$ the following ``quasi-steady-state'' form
+
+  \begin{equation}
+    S(x,t) = A(t) \left(1 - \frac{x}{l}\right) + B(t)\frac{x}{l}
+  \end{equation}
+
+  The two unknown functions can be promptly found by substituting $S(x,t)$ in
+  the boundary conditions
+
+  \begin{equation}
+    \left\{\begin{aligned}
+      &\frac{D}{l}\left(B-A\right) - \frac{3}{2}v A = j_0e^{-\eta t}\\
+      &\frac{D}{l}\left(B-A\right) - \frac{3}{2}v B = 0
+    \end{aligned}\right.
+  \end{equation}
+
+  obtaining
+  
+  \begin{equation}
+    A(t) = \left[\frac{2D}{3lv}-1\right]\frac{2 j_0}{3 v} e^{-\eta t}, \quad
+    B(t) = \frac{4D j_0}{9 l v^2} e^{-\eta t}
+  \end{equation}
+
+  and therefore 
+
+  \begin{equation}
+    S(x,t) = \left[\frac{x}{l} + \frac{2D}{3lv} - 1\right] \frac{2
+    j_0}{3v}e^{-\eta t}
+  \end{equation}
+
+  After finding $S(x,t)$, we can correctly define the problem for the transient
+  solution $U(x,t)$, subject to Dirichlet boundary conditions:
+
+  \begin{equation}
+    \left\{ \begin{aligned}
+      &U_t = D U_{xx}\\
+      &D \, U_x(0, t)  - \frac{3}{2} U(0,t)  = 0\\
+      &D \, U_x(L, t)  - \frac{3}{2} U(L,t)  = 0\\
+      &U(x,0) = \varphi(x)e^{\mu x - \eta t} - S(x,0) =:\tilde{\varphi}(x)
+    \end{aligned}\right.
+  \end{equation}
+
+  We can proceed with separation of variables, and posit that $U(x,t) =
+  X(x)T(t)$. We first solve the spatial boundary value problem
+
+  \begin{equation}
+    \left\{\begin{aligned}
+      &X'' + \lambda X = 0\\
+      &D \, X'(0)  - \frac{3}{2} X(0)  = 0\\
+      &D \, X'(L)  - \frac{3}{2} X(L)  = 0\\
+    \end{aligned}\right.
+  \end{equation}
+
+  The only non-trivial solution of this BVP can be written, assuming $\lambda >
+  0$, as
+
+  \begin{equation}
+    X(x) = a \cos \sqrt{\lambda} x + b \sin \sqrt{\lambda} x 
+  \end{equation}
+
+  and obtain the values for $\lambda$ and the relationship between $a$ and
+  $b$ by substituting in the boundary conditions
+
+  \begin{align}
+    &\left\{\begin{aligned}
+      &D b \sqrt{\lambda} - \frac{3}{2}v a = 0\\
+      &D\sqrt{\lambda} \left[b \cos \sqrt{\lambda} l - a \sin \sqrt{\lambda}
+      l\right] - \frac{3}{2}v \left[a\cos \sqrt{\lambda} l + b \sin
+      \sqrt{\lambda}l\right] = 0
+    \end{aligned}\right.\\[6pt]
+    %
+    &\left\{\begin{aligned}
+      &D b \sqrt{\lambda} - \frac{3}{2}v a = 0\\
+      &\cos\sqrt{\lambda}l \left[Db\sqrt{\lambda} - \frac{3}{2}va\right] + \sin
+      \sqrt{\lambda}l \left[Da\sqrt{\lambda} + \frac{3}{2}v b \right] = 0
+    \end{aligned}\right.\\[10pt]
+    %
+    &\left\{\begin{aligned}
+      & a = \frac{2 D b}{3v} \sqrt{\lambda}\\
+      &\frac{b}{6v} \sin \sqrt{\lambda} l \left[4D^2 \lambda + 9 v^2\right] = 0
+    \end{aligned}\right.
+  \end{align}
+
+  Since $\lambda > 0$, its only possible values are $\lambda = \frac{n^2
+  \pi^2}{l}$, $n \in \mathbb{N}$, yielding the final form for $X(x)$ is
+
+  \begin{equation}
+    X(x) = C_n \left[\frac{2 D n \pi}{3vl} \cos \frac{n \pi}{l}x + \sin \frac{n
+    \pi}{l}x\right]
+  \end{equation}
+
+
+
+  \printbibliography
+
+\end{document}
+
+
+
+
+

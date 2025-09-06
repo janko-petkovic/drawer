@@ -1,0 +1,9 @@
+*.tsv
+
+# Ignore the aux files of tex
+*/output/aux/*
+
+# Ignore virtual-envs
+*-venv
+
+*.npy
